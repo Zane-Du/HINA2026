@@ -160,7 +160,7 @@ public class ServiceCore
 
          // plcs.Add(plc);
 
-         _ = PlcScanTaskAsync(plc, plcScanSignal, runningServiceTasks, taskLock, logHeader); //PLC扫描
+         _= PlcScanTaskAsync(plc, plcScanSignal, runningServiceTasks, taskLock, logHeader); //PLC扫描
          _ = PlcHeartbeatAsync(plc, plcScanSignal, runningServiceTasks, logHeader); //PLC心跳
       }
    }
@@ -186,138 +186,118 @@ public class ServiceCore
       // });
    }
 
-   /// <summary>
-   /// PLC扫描
-   /// </summary>
-   /// <param name="plc"></param>
-   /// <param name="signal"></param>
-   /// <param name="runningServiceTasks"></param>
-   /// <param name="logHeader"></param>
-   /// <returns></returns>
-   private async Task PlcScanTaskAsync(
-      IPLC plc,
-      PLCScanSignalModel signal,
-      CancellationTokenSource runningServiceTasks,
-      ConcurrentDictionary<int, string> taskLock,
-      string logHeader
-   )
-   {
-      try
-      {
-         await Task.Run(
-               async () =>
-               {
-                  await TestPlc(plc);
-
-                  ConcurrentDictionary<int, IServiceHandler> tasks = BuildServiceTasks(
-                     plc,
-                     signal,
-                     runningServiceTasks
-                  ); //当前PLC的所有任务集合
-                  var plcScanValue = new PlcScanSignalDTU(signal.LengthSignal, signal.LengthResection);
-
-                  using var scanTimer = new PeriodicTimer(TimeSpan.FromMilliseconds(20));
-                  int exceptionCount = 0; //异常次数
-
-                  while (await scanTimer.WaitForNextTickAsync(runningServiceTasks.Token).ConfigureAwait(false))
-                  {
-                     exceptionCount = 0;
-                     try
-                     {
+    #region PLC扫描线程
+    /// <summary>
+    /// PLC扫描
+    /// </summary>
+    /// <param name="plc"></param>
+    /// <param name="signal"></param>
+    /// <param name="runningServiceTasks"></param>
+    /// <param name="logHeader"></param>
+    /// <returns></returns>
+    private async Task PlcScanTaskAsync(IPLC plc, PLCScanSignalModel signal, CancellationTokenSource runningServiceTasks, ConcurrentDictionary<int, string> taskLock, string logHeader)
+    {
+        try
+        {
+            await Task.Run(async () =>
+            {
+                await TestPlc(plc);
+                ConcurrentDictionary<int, IServiceHandler> tasks = BuildServiceTasks(plc, signal, runningServiceTasks); //当前PLC的所有任务集合
+                var plcScanValue = new PlcScanSignalDTU(signal.LengthSignal, signal.LengthResection);
+                using var scanTimer = new PeriodicTimer(TimeSpan.FromMilliseconds(20));
+                int exceptionCount = 0; //异常次数
+                while (await scanTimer.WaitForNextTickAsync(runningServiceTasks.Token).ConfigureAwait(false))
+                {
+                    exceptionCount = 0;
+                    try
+                    {
                         if (plc.Scan(signal.AddressStart, plcScanValue, logHeader).IsSuccess)
                         {
-                           foreach (var keyValue in tasks) //启动信号
-                           {
-                              IServiceHandler processTask = keyValue.Value;
-                              short plcValue = (short)plcScanValue.Cmd[keyValue.Key];
-                              if (keyValue.Key != 0 && plcValue <= 0)
-                                 continue;
-                              if (
-                                 taskLock.ContainsKey(processTask.Context.Key)
-                                 || !taskLock.TryAdd(
-                                    processTask.Context.Key,
-                                    $"{processTask.Context.ProcessesType}-{processTask.Context.DeviceStartIndex}"
-                                 )
-                              )
-                                 continue;
-                              _ = Task.Run(
-                                    async () =>
+                            foreach (var keyValue in tasks) //启动信号
+                            {
+                                IServiceHandler processTask = keyValue.Value;
+                                short plcValue = (short)plcScanValue.Cmd[keyValue.Key];
+                                if (keyValue.Key != 0 && plcValue <= 0)
+                                {
+                                    continue;
+                                }
+                                if (taskLock.ContainsKey(processTask.Context.Key) || !taskLock.TryAdd(processTask.Context.Key, $"{processTask.Context.ProcessesType}-{processTask.Context.DeviceStartIndex}"))
+                                {
+                                    continue;
+                                }
+                                _ = Task.Run(async () =>
+                                {
+                                    try
                                     {
-                                       try
-                                       {
-                                          await processTask.Handle(plcValue).ConfigureAwait(false);
-                                       }
-                                       catch (Exception ex)
-                                       {
-                                          exceptionCount++;
-                                          $"启动信号异常：{ex}".LogProcess(
-                                             processTask.Context.ToProcessLogHeader(),
-                                             Log4NetLevelEnum.错误
-                                          );
-                                       }
-                                       finally
-                                       {
-                                          taskLock.TryRemove(processTask.Context.Key, out _);
-                                       }
-                                    },
-                                    runningServiceTasks.Token
-                                 )
-                                 .ConfigureAwait(false);
-                           }
-                           UpdateResections(signal, plcScanValue, logHeader); //切除信号
+                                        await processTask.Handle(plcValue).ConfigureAwait(false);
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        exceptionCount++;
+                                        $"启动信号异常：{ex}".LogProcess(processTask.Context.ToProcessLogHeader(), Log4NetLevelEnum.错误);
+                                    }
+                                    finally
+                                    {
+                                        taskLock.TryRemove(processTask.Context.Key, out _);
+                                    }
+                                },runningServiceTasks.Token).ConfigureAwait(false);
+                            }
+                            UpdateResections(signal, plcScanValue, logHeader); //切除信号
                         }
                         else
                         {
-                           exceptionCount++;
-                           await Task.Delay(500, runningServiceTasks.Token);
+                            exceptionCount++;
+                            await Task.Delay(500, runningServiceTasks.Token);
                         }
-                     }
-                     catch (Exception ex)
-                     {
+                    }
+                    catch (Exception ex)
+                    {
                         exceptionCount++;
                         if (runningServiceTasks?.Token != null && !runningServiceTasks.Token.IsCancellationRequested)
                         {
-                           $"信号扫描线程异常：{ex}".LogProcess(logHeader, Log4NetLevelEnum.错误);
-                           await Task.Delay(500, runningServiceTasks.Token);
+                            $"信号扫描线程异常：{ex}".LogProcess(logHeader, Log4NetLevelEnum.错误);
+                            await Task.Delay(500, runningServiceTasks.Token);
                         }
-                     }
+                    }
 
-                     if (exceptionCount >= 2)
-                     {
+                    if (exceptionCount >= 2)
+                    {
                         if (runningServiceTasks?.Token != null && !runningServiceTasks.Token.IsCancellationRequested)
                         {
-                           $"[{signal.ServiceName}] 连续扫描线程异常，退出任务！！！".LogProcess(
-                              logHeader,
-                              Log4NetLevelEnum.错误
-                           );
+                            $"[{signal.ServiceName}] 连续扫描线程异常，退出任务！！！".LogProcess(logHeader, Log4NetLevelEnum.错误);
                         }
                         break;
-                     }
-                  }
-               },
-               runningServiceTasks.Token
-            )
-            .ConfigureAwait(false);
-      }
-      catch (OperationCanceledException) { } // _taskToken 取消时正常退出
-      catch (Exception ex)
-      {
-         $"扫描线程执行异常：{ex}".LogProcess(logHeader, Log4NetLevelEnum.错误);
-      }
-      finally
-      {
-         runningServiceTasks?.Cancel();
-      }
-   }
+                    }
+                }
+            },runningServiceTasks.Token).ConfigureAwait(false);
+        }
+        catch (OperationCanceledException)
+        {
+            // _taskToken 取消时正常退出
+        }
+        catch (Exception ex)
+        {
+            $"扫描线程执行异常：{ex}".LogProcess(logHeader, Log4NetLevelEnum.错误);
+        }
+        finally
+        {
+            runningServiceTasks?.Cancel();
+        }
+    }
 
-   /// <summary>
-   /// 当前PLC的所有任务集合
-   /// </summary>
-   /// <param name="plc"></param>
-   /// <param name="signal"></param>
-   /// <param name="runningServiceTasks"></param>
-   /// <returns></returns>
-   private ConcurrentDictionary<int, IServiceHandler> BuildServiceTasks(
+    #endregion
+
+
+
+
+    /// <summary>
+    /// 当前PLC的所有任务集合
+    /// </summary>
+    /// <param name="plc"></param>
+    /// <param name="signal"></param>
+    /// <param name="runningServiceTasks"></param>
+    /// <returns></returns>
+    private ConcurrentDictionary<int, IServiceHandler> BuildServiceTasks(
       IPLC plc,
       PLCScanSignalModel signal,
       CancellationTokenSource runningServiceTasks
@@ -369,12 +349,7 @@ public class ServiceCore
    /// </summary>
    /// <param name="plc"></param>
    /// <param name="plcScanSignal"></param>
-   private async Task PlcHeartbeatAsync(
-      IPLC plc,
-      PLCScanSignalModel plcScanSignal,
-      CancellationTokenSource runningServiceTasks,
-      string logHeader
-   )
+   private async Task PlcHeartbeatAsync(  IPLC plc, PLCScanSignalModel plcScanSignal,  CancellationTokenSource runningServiceTasks,   string logHeader )
    {
       try
       {
