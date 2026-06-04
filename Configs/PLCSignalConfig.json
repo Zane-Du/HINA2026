@@ -1,0 +1,4189 @@
+﻿{
+  "PLCScanSignals": [
+    {
+      "ServiceName": "注液机",
+      "DeviceCommunicationType": 1,
+      "AddressStart": {
+        "Address": 0,
+        "Lable": "PC_CMD",
+        "Length": 1,
+        "Offset": 0
+      },
+      "LengthSignal": 280,
+      "LengthResection": 16,
+      "AddressingMethod": "字节",
+      "Heartbeat": {
+        "Address": 0,
+        "Lable": "PC_Alarm.PC_Heartbeat",
+        "Length": 1,
+        "Offset": 0
+      },
+      "HeartbeatIntervalMs": 500,
+      "Status": {
+        "Address": 0,
+        "Lable": "“”",
+        "Length": 1,
+        "Offset": 0
+      },
+      "StartSignas": [
+        {
+          "Index": 0,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.设备状态",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 1,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.BeforeScanCMD[0]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 2,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.BeforeScanCMD[1]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 3,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.BeforeScanCMD[2]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 4,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.BeforeScanCMD[3]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 5,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.BeforeScanCMD[4]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 6,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.BeforeScanCMD[5]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 7,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.RepairInjWeightCMD[0]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 8,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.RepairInjWeightCMD[1]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 9,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.RepairInjWeightCMD[2]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 10,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.RepairInjWeightCMD[3]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 11,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.RepairInjWeightClearCMD[0]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 12,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.RepairInjWeightClearCMD[1]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 13,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.RepairInjWeightClearCMD[2]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 14,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.RepairInjWeightClearCMD[3]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 15,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.RepairInjCMD[0]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 16,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.RepairInjCMD[1]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 17,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.RepairInjCMD[2]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 18,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.RepairInjCMD[3]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 19,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SendInjectCMD[0]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 20,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SendInjectCMD[1]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 21,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SendInjectCMD[2]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 22,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SendInjectCMD[3]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 23,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SendInjectCMD[4]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 24,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SendInjectCMD[5]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 25,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SendInjectCMD[6]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 26,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SendInjectCMD[7]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 27,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SendInjectCMD[8]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 28,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SendInjectCMD[9]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 29,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SendInjectCMD[10]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 30,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SendInjectCMD[11]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 31,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SendInjectCMD[12]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 32,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SendInjectCMD[13]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 33,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SendInjectCMD[14]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 34,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SendInjectCMD[15]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 35,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SendInjectCMD[16]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 36,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SendInjectCMD[17]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 37,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SendInjectCMD[18]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 38,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SendInjectCMD[19]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 39,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.AfterScanCMD[0]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 40,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.AfterScanCMD[1]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 41,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.AfterScanCMD[2]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 42,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.AfterScanCMD[3]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 43,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.AfterScanCMD[4]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 44,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.AfterScanCMD[5]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 45,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.BottomScanCMD[0]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 46,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.BottomScanCMD[1]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 47,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.BottomScanCMD[2]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 48,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.BottomScanCMD[3]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 49,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.BeforeWeightCMD",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 50,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.BeforeWeightClearCMD",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 51,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.AfterWeightCMD",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 52,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.AfterWeightClearCMD",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 53,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.BottomWeightCMD",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 54,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.BottomWeightClearCMD",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 55,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.HeliumCMD",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 56,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.ShortCicuteCMD[0]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 57,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.ShortCicuteCMD[1]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 58,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.ShortCicuteCMD[2]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 59,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.ShortCicuteCMD[3]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 60,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SealPlugHeightCMD",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 61,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.ThickCMD",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 62,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.PlateSweepCMD",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 63,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SplitSweepCMD",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 64,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.GroupTrayScanCMD",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 65,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TrayScanCMD",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 66,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.CupScanCMD",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 67,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.ClearMemoryCMD",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 68,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.VcheckRecordUploadCMD",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 69,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[0]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 70,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[1]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 71,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[2]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 72,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[3]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 73,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[4]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 74,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[5]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 75,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[6]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 76,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[7]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 77,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[8]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 78,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[9]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 79,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[10]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 80,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[11]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 81,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[12]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 82,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[13]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 83,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[14]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 84,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[15]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 85,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[16]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 86,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[17]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 87,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[18]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 88,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[19]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 89,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[20]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 90,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[21]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 91,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[22]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 92,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[23]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 93,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[24]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 94,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[25]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 95,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[26]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 96,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[27]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 97,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[28]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 98,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[29]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 99,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[30]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 100,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InjectionRecordUploadCMD[31]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 101,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[0]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 102,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[1]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 103,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[2]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 104,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[3]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 105,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[4]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 106,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[5]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 107,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[6]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 108,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[7]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 109,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[8]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 110,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[9]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 111,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[10]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 112,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[11]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 113,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[12]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 114,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[13]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 115,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[14]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 116,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[15]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 117,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[16]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 118,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[17]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 119,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[18]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 120,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[19]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 121,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[20]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 122,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[21]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 123,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[22]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 124,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[23]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 125,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[24]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 126,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[25]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 127,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[26]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 128,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[27]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 129,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[28]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 130,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[29]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 131,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[30]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 132,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[31]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 133,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[32]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 134,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[33]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 135,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[34]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 136,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[35]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 137,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[36]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 138,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[37]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 139,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[38]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 140,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[39]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 141,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[40]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 142,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[41]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 143,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[42]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 144,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[43]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 145,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[44]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 146,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[45]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 147,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[46]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 148,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[47]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 149,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[48]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 150,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[49]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 151,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[50]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 152,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[51]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 153,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[52]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 154,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[53]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 155,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[54]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 156,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[55]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 157,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[56]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 158,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[57]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 159,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[58]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 160,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TankRecordUploadCMD[59]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 161,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.HeRecordUploadCMD[0]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 162,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.HeRecordUploadCMD[1]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 163,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.HeRecordUploadCMD[2]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 164,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.HeRecordUploadCMD[3]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 165,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.HeRecordUploadCMD[4]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 166,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.HeRecordUploadCMD[5]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 167,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.HeRecordUploadCMD[6]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 168,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.HeRecordUploadCMD[7]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 169,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.FrontHeightInspection",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 170,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.RearHeightInspection",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 171,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.ParametersVerificationUploadCMD",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 172,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.SwipingLoginCMD",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 173,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InstrumentParametersUploadCMD[0]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 174,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InstrumentParametersUploadCMD[1]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 175,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InstrumentParametersUploadCMD[2]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 176,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InstrumentParametersUploadCMD[3]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 177,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InstrumentParametersUploadCMD[4]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 178,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InstrumentParametersUploadCMD[5]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 179,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InstrumentParametersUploadCMD[6]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 180,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InstrumentParametersUploadCMD[7]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 181,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InstrumentParametersUploadCMD[8]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 182,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InstrumentParametersUploadCMD[9]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 183,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.InstrumentParametersUploadCMD[10]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 184,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.MESOutStationCMD",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 185,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.NailDataUpload[0]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 186,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.NailDataUpload[1]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 187,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.NailDataUpload[2]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 188,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.NailDataUpload[3]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 189,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.NailDataUpload[4]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 190,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.NailDataUpload[5]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 191,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.NailDataUpload[6]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 192,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.NailDataUpload[7]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 193,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.NailDataUpload[8]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 194,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.NailDataUpload[9]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 195,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.NailDataUpload[10]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 196,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve1[0]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 197,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve1[1]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 198,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve1[2]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 199,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve1[3]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 200,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve1[4]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 201,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve1[5]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 202,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve1[6]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 203,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve1[7]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 204,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve1[8]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 205,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve1[9]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 206,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve1[10]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 207,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[0]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 208,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[1]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 209,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[2]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 210,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[3]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 211,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[4]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 212,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[5]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 213,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[6]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 214,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[7]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 215,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[8]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 216,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[9]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 217,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[10]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 218,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[11]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 219,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[12]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 220,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[13]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 221,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[14]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 222,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[15]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 223,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[16]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 224,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[17]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 225,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[18]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 226,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[19]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 227,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[20]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 228,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[21]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 229,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[22]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 230,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[23]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 231,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[24]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 232,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[25]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 233,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[26]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 234,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[27]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 235,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[28]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 236,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[29]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 237,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[30]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 238,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[31]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 239,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[32]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 240,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[33]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 241,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[34]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 242,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[35]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 243,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[36]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 244,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[37]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 245,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[38]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 246,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[39]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 247,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[40]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 248,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[41]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 249,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[42]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 250,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[43]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 251,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[44]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 252,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[45]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 253,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[46]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 254,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[47]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 255,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[48]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 256,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[49]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 257,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[50]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 258,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[51]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 259,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[52]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 260,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[53]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 261,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[54]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 262,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[55]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 263,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[56]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 264,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[57]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 265,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[58]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 266,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[59]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 267,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[60]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 268,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[61]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 269,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[62]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 270,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.Reserve2[63]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 271,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.ReserveSolutionUploadCMD[0]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 272,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.ReserveSolutionUploadCMD[1]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 273,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.ReserveSolutionUploadCMD[2]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 274,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.ReserveSolutionUploadCMD[3]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 275,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.ReserveSolutionUploadCMD[4]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 276,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.ReserveSolutionUploadCMD[5]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 277,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.ReserveSolutionUploadCMD[6]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 278,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.ReserveSolutionUploadCMD[7]",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 279,
+          "Tag": {
+            "Address": 0,
+            "Lable": "PC_CMD.TimeSynchronizationCMD",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        }
+      ],
+      "PLCResections": [
+        {
+          "Index": 0,
+          "Tag": {
+            "Address": 0,
+            "Lable": "上位机被切除",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 1,
+          "Tag": {
+            "Address": 0,
+            "Lable": "前扫码被切除",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 2,
+          "Tag": {
+            "Address": 0,
+            "Lable": "短路测试仪被切除",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 3,
+          "Tag": {
+            "Address": 0,
+            "Lable": "前称重被切除",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 4,
+          "Tag": {
+            "Address": 0,
+            "Lable": "测漏被切除",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 5,
+          "Tag": {
+            "Address": 0,
+            "Lable": "后称重被切除",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 6,
+          "Tag": {
+            "Address": 0,
+            "Lable": "后扫码被切除",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 7,
+          "Tag": {
+            "Address": 0,
+            "Lable": "下料称重被切除",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 8,
+          "Tag": {
+            "Address": 0,
+            "Lable": "回氦被切除",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 9,
+          "Tag": {
+            "Address": 0,
+            "Lable": "测胶钉高度被切除",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 10,
+          "Tag": {
+            "Address": 0,
+            "Lable": "测厚被切除",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 11,
+          "Tag": {
+            "Address": 0,
+            "Lable": "下料扫码被切除",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": true
+        },
+        {
+          "Index": 12,
+          "Tag": {
+            "Address": 0,
+            "Lable": "装盘扫码被切除",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": false
+        },
+        {
+          "Index": 13,
+          "Tag": {
+            "Address": 0,
+            "Lable": "拆盘扫码被切除",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": false
+        },
+        {
+          "Index": 14,
+          "Tag": {
+            "Address": 0,
+            "Lable": "组盘扫码被切除",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": false
+        },
+        {
+          "Index": 15,
+          "Tag": {
+            "Address": 0,
+            "Lable": "CCD被切除",
+            "Length": 1,
+            "Offset": 0
+          },
+          "IsEnabled": false
+        }
+      ]
+    }
+  ],
+  "PLCInteractAddresses": [
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 0,
+        "Tag": {
+          "Address": -1,
+          "Lable": "PC_CMD.设备状态",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 1,
+      "DeviceCommunicationType": 0,
+      "DeviceStartIndex": 1,
+      "DataLength": 86,
+      "RowCount": 0,
+      "ColumnCount": 0,
+      "DataAddress": {
+        "Address": -1,
+        "Lable": "PC_SEQ",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": -1,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [
+        {
+          "Type": 1,
+          "ValueStr": "2"
+        },
+        {
+          "Type": 0,
+          "ValueStr": "1"
+        },
+        {
+          "Type": 0,
+          "ValueStr": "555"
+        }
+      ],
+      "ProductionDataType": 0,
+      "ProductionIndex": 1,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 1,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.BeforeScanCMD[0]",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 11,
+      "DeviceCommunicationType": 42,
+      "DeviceStartIndex": 1,
+      "DataLength": 2,
+      "RowCount": 0,
+      "ColumnCount": 0,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_BeforeScan",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 1,
+      "ProductionIndex": 1,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 49,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.BeforeWeightCMD",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 51,
+      "DeviceCommunicationType": 64,
+      "DeviceStartIndex": 1,
+      "DataLength": 8,
+      "RowCount": 0,
+      "ColumnCount": 0,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_BeforWeight",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 1,
+      "ProductionIndex": 2,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 50,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.BeforeWeightClearCMD",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 52,
+      "DeviceCommunicationType": 64,
+      "DeviceStartIndex": 1,
+      "DataLength": 8,
+      "RowCount": 0,
+      "ColumnCount": 0,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_BeforWeightClear",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 0,
+      "ProductionIndex": 2,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 56,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.ShortCicuteCMD[0]",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 31,
+      "DeviceCommunicationType": 85,
+      "DeviceStartIndex": 1,
+      "DataLength": 1,
+      "RowCount": 0,
+      "ColumnCount": 0,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_ShortCicute[0]",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 1,
+      "ProductionIndex": 3,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 57,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.ShortCicuteCMD[1]",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 31,
+      "DeviceCommunicationType": 85,
+      "DeviceStartIndex": 2,
+      "DataLength": 1,
+      "RowCount": 0,
+      "ColumnCount": 0,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_ShortCicute[1]",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 1,
+      "ProductionIndex": 3,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 65,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.TrayScanCMD",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 15,
+      "DeviceCommunicationType": 48,
+      "DeviceStartIndex": 1,
+      "DataLength": 1,
+      "RowCount": 0,
+      "ColumnCount": 0,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_TrayScan",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 0,
+      "ProductionIndex": 4,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 66,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.CupScanCMD",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 16,
+      "DeviceCommunicationType": 48,
+      "DeviceStartIndex": 1,
+      "DataLength": 1,
+      "RowCount": 0,
+      "ColumnCount": 0,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_CupScan",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 0,
+      "ProductionIndex": 4,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 19,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.SendInjectCMD[0]",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 71,
+      "DeviceCommunicationType": 23,
+      "DeviceStartIndex": 1,
+      "DataLength": 1,
+      "RowCount": 0,
+      "ColumnCount": 0,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_InjectionPump[0]",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 3502,
+        "Lable": "3502",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 0,
+      "ProductionIndex": 5,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 20,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.SendInjectCMD[1]",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 71,
+      "DeviceCommunicationType": 23,
+      "DeviceStartIndex": 1,
+      "DataLength": 1,
+      "RowCount": 0,
+      "ColumnCount": 0,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_InjectionPump[1]",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 3508,
+        "Lable": "3508",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 0,
+      "ProductionIndex": 5,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 21,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.SendInjectCMD[2]",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 71,
+      "DeviceCommunicationType": 23,
+      "DeviceStartIndex": 1,
+      "DataLength": 1,
+      "RowCount": 0,
+      "ColumnCount": 0,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_InjectionPump[2]",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 3514,
+        "Lable": "3514",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 0,
+      "ProductionIndex": 5,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 22,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.SendInjectCMD[3]",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 71,
+      "DeviceCommunicationType": 23,
+      "DeviceStartIndex": 1,
+      "DataLength": 1,
+      "RowCount": 0,
+      "ColumnCount": 0,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_InjectionPump[3]",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 3520,
+        "Lable": "3520",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 0,
+      "ProductionIndex": 5,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 68,
+        "Tag": {
+          "Address": -1,
+          "Lable": "PC_CMD.VcheckRecordUploadCMD",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 74,
+      "DeviceCommunicationType": 0,
+      "DeviceStartIndex": 1,
+      "DataLength": 1,
+      "RowCount": 4,
+      "ColumnCount": 16,
+      "DataAddress": {
+        "Address": -1,
+        "Lable": "PC_VacuumMES",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": -1,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [
+        {
+          "Type": 0,
+          "ValueStr": "16"
+        },
+        {
+          "Type": 1,
+          "ValueStr": "16"
+        }
+      ],
+      "ProductionDataType": 1,
+      "ProductionIndex": 5,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 69,
+        "Tag": {
+          "Address": -1,
+          "Lable": "PC_CMD.InjectionRecordUploadCMD[0]",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 73,
+      "DeviceCommunicationType": 0,
+      "DeviceStartIndex": 1,
+      "DataLength": 1,
+      "RowCount": 4,
+      "ColumnCount": 16,
+      "DataAddress": {
+        "Address": -1,
+        "Lable": "PC_InjectionMES",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": -1,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [
+        {
+          "Type": 0,
+          "ValueStr": "16"
+        },
+        {
+          "Type": 1,
+          "ValueStr": "16"
+        }
+      ],
+      "ProductionDataType": 1,
+      "ProductionIndex": 5,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 201,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.Reserve1[5]",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 115,
+      "DeviceCommunicationType": 0,
+      "DeviceStartIndex": 1,
+      "DataLength": 1,
+      "RowCount": 4,
+      "ColumnCount": 12,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_ParaChang",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "PC_ParamOriginal",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 0,
+      "ProductionIndex": 5,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 101,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.TankRecordUploadCMD[0]",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 75,
+      "DeviceCommunicationType": 0,
+      "DeviceStartIndex": 1,
+      "DataLength": 3,
+      "RowCount": 4,
+      "ColumnCount": 16,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_TankMES[0]",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 1,
+      "ProductionIndex": 6,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 102,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.TankRecordUploadCMD[1]",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 75,
+      "DeviceCommunicationType": 0,
+      "DeviceStartIndex": 2,
+      "DataLength": 3,
+      "RowCount": 4,
+      "ColumnCount": 16,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_TankMES[1]",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 1,
+      "ProductionIndex": 6,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 103,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.TankRecordUploadCMD[2]",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 75,
+      "DeviceCommunicationType": 0,
+      "DeviceStartIndex": 3,
+      "DataLength": 3,
+      "RowCount": 4,
+      "ColumnCount": 16,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_TankMES[2]",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 1,
+      "ProductionIndex": 6,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 104,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.TankRecordUploadCMD[3]",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 75,
+      "DeviceCommunicationType": 0,
+      "DeviceStartIndex": 4,
+      "DataLength": 3,
+      "RowCount": 4,
+      "ColumnCount": 16,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_TankMES[3]",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 1,
+      "ProductionIndex": 6,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 105,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.TankRecordUploadCMD[4]",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 75,
+      "DeviceCommunicationType": 0,
+      "DeviceStartIndex": 5,
+      "DataLength": 3,
+      "RowCount": 4,
+      "ColumnCount": 16,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_TankMES[4]",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 1,
+      "ProductionIndex": 6,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 106,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.TankRecordUploadCMD[5]",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 75,
+      "DeviceCommunicationType": 0,
+      "DeviceStartIndex": 6,
+      "DataLength": 3,
+      "RowCount": 4,
+      "ColumnCount": 16,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_TankMES[5]",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 1,
+      "ProductionIndex": 6,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 100,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.InjectionRecordUploadCMD[31]",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 62,
+      "DeviceCommunicationType": 0,
+      "DeviceStartIndex": 1,
+      "DataLength": 1,
+      "RowCount": 4,
+      "ColumnCount": 12,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 1,
+      "ProductionIndex": 10,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 51,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.AfterWeightCMD",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 53,
+      "DeviceCommunicationType": 64,
+      "DeviceStartIndex": 1,
+      "DataLength": 8,
+      "RowCount": 0,
+      "ColumnCount": 0,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_AfterWeight",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 1,
+      "ProductionIndex": 11,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 52,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.AfterWeightClearCMD",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 54,
+      "DeviceCommunicationType": 64,
+      "DeviceStartIndex": 1,
+      "DataLength": 8,
+      "RowCount": 0,
+      "ColumnCount": 0,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_AfterWeightClear",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 0,
+      "ProductionIndex": 11,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 170,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.RearHeightInspection",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 101,
+      "DeviceCommunicationType": 0,
+      "DeviceStartIndex": 1,
+      "DataLength": 8,
+      "RowCount": 0,
+      "ColumnCount": 0,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_AfterAltimetry",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 1,
+      "ProductionIndex": 17,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 60,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.SealPlugHeightCMD",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 106,
+      "DeviceCommunicationType": 0,
+      "DeviceStartIndex": 1,
+      "DataLength": 1,
+      "RowCount": 0,
+      "ColumnCount": 0,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_Altimetry",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 1,
+      "ProductionIndex": 18,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 184,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.MESOutStationCMD",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 253,
+      "DeviceCommunicationType": 0,
+      "DeviceStartIndex": 1,
+      "DataLength": 8,
+      "RowCount": 0,
+      "ColumnCount": 0,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_MESOutStation[0]",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 0,
+      "ProductionIndex": 19,
+      "IsEnable": true
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 207,
+        "Tag": {
+          "Address": -1,
+          "Lable": "PC_CMD.Reserve2[0]",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 57,
+      "DeviceCommunicationType": 0,
+      "DeviceStartIndex": 0,
+      "DataLength": 1,
+      "RowCount": 1,
+      "ColumnCount": 8,
+      "DataAddress": {
+        "Address": -1,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": -1,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [
+        {
+          "Type": 0,
+          "ValueStr": "-1"
+        }
+      ],
+      "ProductionDataType": 1,
+      "ProductionIndex": 20,
+      "IsEnable": false
+    },
+    {
+      "ServiceName": "注液机",
+      "StartCommand": {
+        "Index": 270,
+        "Tag": {
+          "Address": 0,
+          "Lable": "PC_CMD.Reserve2[63]",
+          "Length": 1,
+          "Offset": 0
+        },
+        "IsEnabled": true
+      },
+      "ProcessesType": 72,
+      "DeviceCommunicationType": 68,
+      "DeviceStartIndex": 1,
+      "DataLength": 1,
+      "RowCount": 1,
+      "ColumnCount": 1,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_InjectionPump[5]",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 3520,
+        "Lable": "3520",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtensionProps": [],
+      "ProductionDataType": 2,
+      "ProductionIndex": 21,
+      "IsEnable": true
+    }
+  ],
+  "PLCAlarmAddresses": {
+    "Alarm_BeforeWeighing": {
+      "Address": 0,
+      "Lable": "PC_Alarm.Unstable_BeforeWeighing",
+      "Length": 1,
+      "Offset": 0
+    },
+    "Alarm_AfterWeighing": {
+      "Address": 0,
+      "Lable": "PC_Alarm.Unstable_AfterWeighing",
+      "Length": 1,
+      "Offset": 0
+    },
+    "Alarm_RefillWeighing": {
+      "Address": 0,
+      "Lable": "PC_Alarm.Unstable_RehydrationWeighing",
+      "Length": 1,
+      "Offset": 0
+    },
+    "Alarm_DewPoint": {
+      "Address": 0,
+      "Lable": "",
+      "Length": 1,
+      "Offset": 0
+    },
+    "Alarm_Zeroing_BeforeWeighing": {
+      "Address": 0,
+      "Lable": "PC_Alarm.Zeroing_BeforeWeighing",
+      "Length": 1,
+      "Offset": 0
+    },
+    "Alarm_Zeroing_AfterWeighing": {
+      "Address": 0,
+      "Lable": "PC_Alarm.Zeroing_AfterWeighing",
+      "Length": 1,
+      "Offset": 0
+    },
+    "Alarm_Zeroing_DownWeighing": {
+      "Address": 0,
+      "Lable": "PC_Alarm.Zeroing_DownWeighing",
+      "Length": 1,
+      "Offset": 0
+    },
+    "Alarm_Zeroing_RefillWeighing": {
+      "Address": 0,
+      "Lable": "PC_Alarm.Zeroing_RehydrationWeighing",
+      "Length": 1,
+      "Offset": 0
+    }
+  },
+  "CustomPlcInteractAddresses": [
+    {
+      "Id": 1,
+      "CustomInteractName": 0,
+      "DataLength": 1,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_CMD.SwipingLoginCMD",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "IsEnable": false
+    },
+    {
+      "Id": 2,
+      "CustomInteractName": 2,
+      "DataLength": 1,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_Data",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "IsEnable": false
+    },
+    {
+      "Id": 3,
+      "CustomInteractName": 5,
+      "DataLength": 1,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_CMD.Reserve1[0]",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "IsEnable": true
+    },
+    {
+      "Id": 4,
+      "CustomInteractName": 4,
+      "DataLength": 1,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_ParamUplocal",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "",
+        "Length": 1,
+        "Offset": 0
+      },
+      "IsEnable": true
+    },
+    {
+      "Id": 5,
+      "CustomInteractName": 3,
+      "DataLength": 1,
+      "DataAddress": {
+        "Address": 0,
+        "Lable": "PC_MesParamNotify",
+        "Length": 1,
+        "Offset": 0
+      },
+      "ExtraDataAddress": {
+        "Address": 0,
+        "Lable": "PC_CMD.Reserve1[6]",
+        "Length": 1,
+        "Offset": 0
+      },
+      "IsEnable": true
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+﻿{
+  "MesName": "国轩MES接口",
+  "MesInterfaceInfo": {
+    "BaseAddress": "http://10.2.100.8:13308",
+    "BaseAddress2": "",
+    "LocalMesIP": "",
+    "Timeout": 5000,
+    "MesParameterItems": [
+      {
+        "InterfaceName": "设备上位机账号登录接口",
+        "BserUrlIndex": 1,
+        "Url": "/api/ipccheck/account",
+        "IsEnable": false,
+        "PollingIntervalSec": 60
+      },
+      {
+        "InterfaceName": "获取一注数据接口",
+        "BserUrlIndex": 1,
+        "Url": "/aiipcapi/api/station/private/produce/paramQueryV2",
+        "IsEnable": false,
+        "PollingIntervalSec": 0
+      },
+      {
+        "InterfaceName": "在制品投料防呆校验接口",
+        "BserUrlIndex": 1,
+        "Url": "/aiipcapi/api/station/private/produce/feeding/preventionCheck",
+        "IsEnable": false,
+        "PollingIntervalSec": 60
+      },
+      {
+        "InterfaceName": "工单获取接口",
+        "BserUrlIndex": 1,
+        "Url": "/aiipcapi/api/station/private/produce/order/getByProductCode",
+        "IsEnable": false,
+        "PollingIntervalSec": 60
+      },
+      {
+        "InterfaceName": "原材料投料校验接口",
+        "BserUrlIndex": 1,
+        "Url": "/api/station/private/produce/material/in",
+        "IsEnable": false,
+        "PollingIntervalSec": 60
+      },
+      {
+        "InterfaceName": "原材料卸料接口",
+        "BserUrlIndex": 1,
+        "Url": "/api/station/private/produce/material/out",
+        "IsEnable": false,
+        "PollingIntervalSec": 60
+      },
+      {
+        "InterfaceName": "产品结果数据收集接口（单条）",
+        "BserUrlIndex": 1,
+        "Url": "/aiipcapi/api/produce/produce/open/add",
+        "IsEnable": false,
+        "PollingIntervalSec": 60
+      },
+      {
+        "InterfaceName": "OEE主动停机上报接口",
+        "BserUrlIndex": 0,
+        "Url": "http://10.2.100.37:19092/api/tab/",
+        "IsEnable": false,
+        "PollingIntervalSec": 60
+      },
+      {
+        "InterfaceName": "OEE被动停机及报警上报接口",
+        "BserUrlIndex": 0,
+        "Url": "http://10.2.100.37:19090/api/tab/",
+        "IsEnable": false,
+        "PollingIntervalSec": 0
+      },
+      {
+        "InterfaceName": "待料、堵料上报接口",
+        "BserUrlIndex": 0,
+        "Url": "http://10.2.100.37:19091/api/tab/",
+        "IsEnable": false,
+        "PollingIntervalSec": 60
+      },
+      {
+        "InterfaceName": "设备状态上报接口",
+        "BserUrlIndex": 1,
+        "Url": "/aiipcapi/api/equip/oeeStatus",
+        "IsEnable": false,
+        "PollingIntervalSec": 60
+      },
+      {
+        "InterfaceName": "开机上传参数接口",
+        "BserUrlIndex": 1,
+        "Url": "/aiipcapi/api/station/private/produce/equip/uploadParam",
+        "IsEnable": false,
+        "PollingIntervalSec": 300
+      },
+      {
+        "InterfaceName": "修改参数上传接口",
+        "BserUrlIndex": 1,
+        "Url": "/aiipcapi/api/station/private/produce/equip/changeParam",
+        "IsEnable": false,
+        "PollingIntervalSec": 60
+      },
+      {
+        "InterfaceName": "设备产能上报接口",
+        "BserUrlIndex": 1,
+        "Url": "/aiipcapi/api/equip/oeeCapacity",
+        "IsEnable": false,
+        "PollingIntervalSec": 60
+      },
+      {
+        "InterfaceName": "工装夹具寿命上传接口",
+        "BserUrlIndex": 1,
+        "Url": "/aiipcapi/api/station/private/produce/frock/life",
+        "IsEnable": false,
+        "PollingIntervalSec": 60
+      },
+      {
+        "InterfaceName": "工装夹具更换上传接口",
+        "BserUrlIndex": 1,
+        "Url": "/aiipcapi/api/station/private/produce/frock/change",
+        "IsEnable": false,
+        "PollingIntervalSec": 60
+      },
+      {
+        "InterfaceName": "发送电池干重",
+        "BserUrlIndex": 1,
+        "Url": "http://172.26.232.173:5082/WeightBattery",
+        "IsEnable": false,
+        "PollingIntervalSec": 0
+      }
+    ]
+  },
+  "MqttServiceInfo": {
+    "BrokerAddress": "10.0.0.2",
+    "Port": 1883,
+    "Topic": "/aiipc/LZGX-CMD-YZE-201",
+    "Interval": 10000,
+    "Enable": false
+  },
+  "FtpServiceInfo": {
+    "Host": "10.2.100.71",
+    "Name": "cellplant6cl",
+    "Password": "lzgx@1234",
+    "Port": 21,
+    "RemoteDirectory": "/02三工段-L200/C1700一次注液/2#一次注液机",
+    "UploadTimeoutMs": 30000,
+    "Enable": false
+  }
+}

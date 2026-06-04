@@ -1,0 +1,347 @@
+﻿{
+  "BeforeScanBarcodeParameter": {
+    "Process": 11,
+    "Visible": 0,
+    "SetLaneCount": 1,
+    "Count": 1,
+    "Lanes": [
+      {
+        "Index": 1,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      }
+    ]
+  },
+  "AfterScanBarcodeParameter": {
+    "Process": 12,
+    "Visible": 2,
+    "SetLaneCount": 4,
+    "Count": 1,
+    "Lanes": [
+      {
+        "Index": 1,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 2,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 3,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 4,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      }
+    ]
+  },
+  "ShortCircuitParameter": {
+    "Process": 31,
+    "Visible": 0,
+    "SetLaneCount": 8,
+    "Count": 1,
+    "Lanes": [
+      {
+        "Index": 1,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 2,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 3,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 4,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 5,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 6,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 7,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 8,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      }
+    ]
+  },
+  "TestVoltageParameter": {
+    "Process": 32,
+    "Visible": 2,
+    "SetLaneCount": 4,
+    "Count": 1,
+    "Lanes": [
+      {
+        "Index": 1,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 2,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 3,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 4,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      }
+    ]
+  },
+  "BeforeWeighParameter": {
+    "Process": 51,
+    "Visible": 0,
+    "SetLaneCount": 8,
+    "Count": 1,
+    "Lanes": [
+      {
+        "Index": 1,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 2,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 3,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 4,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 5,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 6,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 7,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 8,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      }
+    ]
+  },
+  "AfterWeighParameter": {
+    "Process": 53,
+    "Visible": 0,
+    "SetLaneCount": 8,
+    "Count": 1,
+    "Lanes": [
+      {
+        "Index": 1,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 2,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 3,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 4,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 5,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 6,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 7,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      },
+      {
+        "Index": 8,
+        "CurrentValue": "",
+        "TragetValue": "",
+        "Upper": 0,
+        "Lower": 0,
+        "IsSuccess": false,
+        "UpdateTime": "0001-01-01T00:00:00"
+      }
+    ]
+  }
+}

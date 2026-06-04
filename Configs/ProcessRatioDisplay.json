@@ -1,0 +1,250 @@
+﻿{
+  "Last24HourOutputValue": {
+    "CurrentCountingHour": 11,
+    "HourlyDatas": [
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "21日 00时~1时",
+        "Time": "2026-05-21T00:00:00",
+        "Hour": 0,
+        "IsCurrentHour": false
+      },
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "21日 01时~2时",
+        "Time": "2026-05-21T01:00:00",
+        "Hour": 1,
+        "IsCurrentHour": false
+      },
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "21日 02时~3时",
+        "Time": "2026-05-21T02:00:00",
+        "Hour": 2,
+        "IsCurrentHour": false
+      },
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "21日 03时~4时",
+        "Time": "2026-05-21T03:00:00",
+        "Hour": 3,
+        "IsCurrentHour": false
+      },
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "21日 04时~5时",
+        "Time": "2026-05-21T04:00:00",
+        "Hour": 4,
+        "IsCurrentHour": false
+      },
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "21日 05时~6时",
+        "Time": "2026-05-21T05:00:00",
+        "Hour": 5,
+        "IsCurrentHour": false
+      },
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "21日 06时~7时",
+        "Time": "2026-05-21T06:00:00",
+        "Hour": 6,
+        "IsCurrentHour": false
+      },
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "21日 07时~8时",
+        "Time": "2026-05-21T07:00:00",
+        "Hour": 7,
+        "IsCurrentHour": false
+      },
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "21日 08时~9时",
+        "Time": "2026-05-21T08:00:00",
+        "Hour": 8,
+        "IsCurrentHour": false
+      },
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "04日 09时~2026-6-4 10:00:00时",
+        "Time": "2026-06-04T09:00:00",
+        "Hour": 9,
+        "IsCurrentHour": false
+      },
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "21日 10时~11时",
+        "Time": "2026-05-21T10:00:00",
+        "Hour": 10,
+        "IsCurrentHour": false
+      },
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "04日 11时~2026-6-4 12:00:00时",
+        "Time": "2026-06-04T11:00:00",
+        "Hour": 11,
+        "IsCurrentHour": true
+      },
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "21日 12时~13时",
+        "Time": "2026-05-21T12:00:00",
+        "Hour": 12,
+        "IsCurrentHour": false
+      },
+      {
+        "ProductionCount": 454,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "454 颗",
+        "Subtitle": "21日 13时~2026/5/21 14:00:00时",
+        "Time": "2026-05-21T13:00:00",
+        "Hour": 13,
+        "IsCurrentHour": false
+      },
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "03日 14时~2026-6-3 15:00:00时",
+        "Time": "2026-06-03T14:00:00",
+        "Hour": 14,
+        "IsCurrentHour": false
+      },
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "03日 15时~2026-6-3 16:00:00时",
+        "Time": "2026-06-03T15:00:00",
+        "Hour": 15,
+        "IsCurrentHour": false
+      },
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "03日 16时~2026-6-3 17:00:00时",
+        "Time": "2026-06-03T16:00:00",
+        "Hour": 16,
+        "IsCurrentHour": false
+      },
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "03日 17时~2026-6-3 18:00:00时",
+        "Time": "2026-06-03T17:00:00",
+        "Hour": 17,
+        "IsCurrentHour": false
+      },
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "29日 18时~2026/5/29 19:00:00时",
+        "Time": "2026-05-29T18:00:00",
+        "Hour": 18,
+        "IsCurrentHour": false
+      },
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "21日 19时~20时",
+        "Time": "2026-05-21T19:00:00",
+        "Hour": 19,
+        "IsCurrentHour": false
+      },
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "21日 20时~21时",
+        "Time": "2026-05-21T20:00:00",
+        "Hour": 20,
+        "IsCurrentHour": false
+      },
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "21日 21时~22时",
+        "Time": "2026-05-21T21:00:00",
+        "Hour": 21,
+        "IsCurrentHour": false
+      },
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "21日 22时~23时",
+        "Time": "2026-05-21T22:00:00",
+        "Hour": 22,
+        "IsCurrentHour": false
+      },
+      {
+        "ProductionCount": 0,
+        "ValuePrefix": "",
+        "ValueSuffix": " 颗",
+        "DisplayValue": "0 颗",
+        "Subtitle": "21日 23时~24时",
+        "Time": "2026-05-21T23:00:00",
+        "Hour": 23,
+        "IsCurrentHour": false
+      }
+    ],
+    "CurrentCountingMinute": "2026-06-04T11:56:00",
+    "CurrentMinuteCount": 0,
+    "LastMinuteCount": 0
+  }
+}

@@ -1,0 +1,50 @@
+﻿{
+  "ListeningIP": "*",
+  "Port": 6070,
+  "AutoStartWebApi": true,
+  "IsEnableSwagger": true,
+  "WebApiRoutes": [
+    {
+      "Key": "Kinlo.WebApi.Controllers.GX_Controller.UploadParam",
+      "InterfaceName": "国轩接收工艺参数接口",
+      "Url": "/api/tpm/produce/uploadParam",
+      "IsEnable": true
+    },
+    {
+      "Key": "Kinlo.WebApi.Controllers.GX_GetDataController.ProductData",
+      "InterfaceName": "生产数据接口",
+      "Url": "/monitor/productData",
+      "IsEnable": true
+    },
+    {
+      "Key": "Kinlo.WebApi.Controllers.GX_GetDataController.Outputoee",
+      "InterfaceName": "获取产出和OEE接口",
+      "Url": "/monitor/outputoee",
+      "IsEnable": true
+    },
+    {
+      "Key": "Kinlo.WebApi.Controllers.GX_GetDataController.DeviceStatus",
+      "InterfaceName": "获取设备状态变更记录接口",
+      "Url": "/monitor/deviceStatus",
+      "IsEnable": true
+    },
+    {
+      "Key": "Kinlo.WebApi.Controllers.GX_GetDataController.DeviceExcpetion",
+      "InterfaceName": "获取设备异常信息明细接口",
+      "Url": "/monitor/deviceException",
+      "IsEnable": true
+    },
+    {
+      "Key": "Kinlo.WebApi.Controllers.LocalDataController.UpdateReplenishVolume",
+      "InterfaceName": "更新补液量接口",
+      "Url": "/product/updateReplenishVolume",
+      "IsEnable": true
+    },
+    {
+      "Key": "Kinlo.WebApi.Controllers.LocalDataController.GetBatterysByBarcode",
+      "InterfaceName": "模糊查询电池信息接口",
+      "Url": "/product/getBatterysByBarcode",
+      "IsEnable": true
+    }
+  ]
+}

@@ -510,12 +510,7 @@ public abstract class ServiceHandlerBase : IServiceHandler
    #endregion
 
    #region 发送值到PLC的 PCData1 (注液量等)
-   protected ResultTypeEnum OnSupplementaryElectrolyteToPlc(
-      ReceivePlcDataModel plcData,
-      float value,
-      string logHeader,
-      string sendType
-   )
+   protected ResultTypeEnum OnSupplementaryElectrolyteToPlc(ReceivePlcDataModel plcData, float value, string logHeader,  string sendType )
    {
       for (int n = 1; n < 4; n++)
       {

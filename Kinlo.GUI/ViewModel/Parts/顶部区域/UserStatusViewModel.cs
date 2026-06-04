@@ -44,47 +44,47 @@ public class UserStatusViewModel : Screen
       _devicesConfig = container.Get<DevicesConfig>();
 
       UsersStatus.LoginActionAsync = LoginAsync;
+      //KeyboardHook.Hook.RegistrationListening(
+      //   new ShortcutKeyModel
+      //   {
+      //      IsCrtl = true,
+      //      IsAlt = true,
+      //      Key = 'K',
+      //      Action = () => LoginWithShortcutKey(1),
+      //   }
+      //);
       KeyboardHook.Hook.RegistrationListening(
          new ShortcutKeyModel
          {
             IsCrtl = true,
-            IsAlt = true,
-            Key = 'K',
-            Action = () => LoginWithShortcutKey(1),
-         }
-      );
-      KeyboardHook.Hook.RegistrationListening(
-         new ShortcutKeyModel
-         {
-            IsCrtl = true,
-            Key = 'W',
+            Key = 'Z',
             Action = () => LoginWithShortcutKey(2),
          }
       );
-      KeyboardHook.Hook.RegistrationListening(
-         new ShortcutKeyModel
-         {
-            IsCrtl = true,
-            Key = 'G',
-            Action = () => LoginWithShortcutKey(3),
-         }
-      );
-      KeyboardHook.Hook.RegistrationListening(
-         new ShortcutKeyModel
-         {
-            IsCrtl = true,
-            Key = 'B',
-            Action = () => LoginWithShortcutKey(4),
-         }
-      );
-      KeyboardHook.Hook.RegistrationListening(
-         new ShortcutKeyModel
-         {
-            IsCrtl = true,
-            Key = 'B',
-            Action = () => LoginWithShortcutKey(4),
-         }
-      );
+      //KeyboardHook.Hook.RegistrationListening(
+      //   new ShortcutKeyModel
+      //   {
+      //      IsCrtl = true,
+      //      Key = 'G',
+      //      Action = () => LoginWithShortcutKey(3),
+      //   }
+      //);
+      //KeyboardHook.Hook.RegistrationListening(
+      //   new ShortcutKeyModel
+      //   {
+      //      IsCrtl = true,
+      //      Key = 'B',
+      //      Action = () => LoginWithShortcutKey(4),
+      //   }
+      //);
+      //KeyboardHook.Hook.RegistrationListening(
+      //   new ShortcutKeyModel
+      //   {
+      //      IsCrtl = true,
+      //      Key = 'B',
+      //      Action = () => LoginWithShortcutKey(4),
+      //   }
+      //);
       RegisterUsbCardReader();
    }
 

@@ -73,21 +73,17 @@ public static class InspectionHelper
     return results;
   }
 
-  /// <summary>
-  /// 范围值点检方法
-  /// </summary>
-  /// <param name="process"></param>
-  /// <param name="inspectionConfig"></param>
-  /// <param name="plcValue"></param>
-  /// <param name="scanCodeResults"></param>
-  /// <returns></returns>
-  public static ResultTypeEnum RangeInspection(
-    this ProcessTypeEnum process,
-    int index,
-    InspectionConfig inspectionConfig,
-    (bool IsSuccess, double Value) deviceResult
+    /// <summary>
+    /// 范围值点检方法
+    /// </summary>
+    /// <param name="process"></param>
+    /// <param name="inspectionConfig"></param>
+    /// <param name="plcValue"></param>
+    /// <param name="scanCodeResults"></param>
+    /// <returns></returns>
+    public static ResultTypeEnum RangeInspection(this ProcessTypeEnum process, int index, InspectionConfig inspectionConfig, (bool IsSuccess, double Value) deviceResult
   )
-  {
+    {
     if (process is not (ProcessTypeEnum.前称重 or ProcessTypeEnum.后称重 or ProcessTypeEnum.测电压))
     {
       Growl.Warning("只能前称重、后称重或测电压点检");

@@ -1,0 +1,453 @@
+﻿{
+  "Roles": [
+    {
+      "Level": 1,
+      "Name": "生产",
+      "PlcLevel": 1,
+      "MESLevel": ""
+    },
+    {
+      "Level": 2,
+      "Name": "工艺",
+      "PlcLevel": 3,
+      "MESLevel": ""
+    },
+    {
+      "Level": 4,
+      "Name": "设备",
+      "PlcLevel": 2,
+      "MESLevel": ""
+    },
+    {
+      "Level": 9223372036854775807,
+      "Name": "管理员",
+      "PlcLevel": 4,
+      "MESLevel": ""
+    }
+  ],
+  "Menus": [
+    {
+      "DisplayName": "主頁",
+      "BindingOrKey": "HomeViewModel",
+      "EditLevel": 18446744073709551615
+    },
+    {
+      "DisplayName": "生产历史",
+      "BindingOrKey": "ProductionHistoryLayoutViewModel",
+      "EditLevel": 18446744073709551615
+    },
+    {
+      "DisplayName": "实时日志",
+      "BindingOrKey": "LogHistoryViewModel",
+      "EditLevel": 18446744073709551615
+    },
+    {
+      "DisplayName": "图表统计",
+      "BindingOrKey": "DataStatisticalChartsViewModel",
+      "EditLevel": 18446744073709551615
+    },
+    {
+      "DisplayName": "参数配置",
+      "BindingOrKey": "ConfigurationParameterViewModel",
+      "EditLevel": 5
+    },
+    {
+      "DisplayName": "设备配置",
+      "BindingOrKey": "ConfigurationDeviceViewModel",
+      "EditLevel": 7
+    },
+    {
+      "DisplayName": "用户管理",
+      "BindingOrKey": "UserManagementViewModel",
+      "EditLevel": 4611686018427387904
+    },
+    {
+      "DisplayName": "角色管理",
+      "BindingOrKey": "RoleManagementViewModel",
+      "EditLevel": 4611686018427387904
+    },
+    {
+      "DisplayName": "信号配置",
+      "BindingOrKey": "ConfigurationInteractionSignalViewModel",
+      "EditLevel": 4611686018427387904
+    },
+    {
+      "DisplayName": "Web服务",
+      "BindingOrKey": "ConfigurationWebViewModel",
+      "EditLevel": 7
+    },
+    {
+      "DisplayName": "MES配置",
+      "BindingOrKey": "ConfigurationMesViewModel",
+      "EditLevel": 7
+    },
+    {
+      "DisplayName": "MES参数",
+      "BindingOrKey": "ConfigurationMesParameterViewModel",
+      "EditLevel": 7
+    }
+  ],
+  "DeviceParameters": [
+    {
+      "DisplayName": "软件标题",
+      "BindingOrKey": "Title",
+      "EditLevel": 6
+    },
+    {
+      "DisplayName": "白班时间",
+      "BindingOrKey": "DayShift",
+      "EditLevel": 4
+    },
+    {
+      "DisplayName": "夜班时间",
+      "BindingOrKey": "NightShift",
+      "EditLevel": 4
+    },
+    {
+      "DisplayName": "生产数据路径",
+      "BindingOrKey": "ProductionDataPath",
+      "EditLevel": 4
+    },
+    {
+      "DisplayName": "设备编码",
+      "BindingOrKey": "DeviceCode",
+      "EditLevel": 6
+    },
+    {
+      "DisplayName": "设备名称",
+      "BindingOrKey": "DeviceName",
+      "EditLevel": 6
+    },
+    {
+      "DisplayName": "产线编号",
+      "BindingOrKey": "LineName",
+      "EditLevel": 6
+    },
+    {
+      "DisplayName": "工序编号",
+      "BindingOrKey": "ProcessOperationName",
+      "EditLevel": 6
+    },
+    {
+      "DisplayName": "工序名称",
+      "BindingOrKey": "ProcessName",
+      "EditLevel": 6
+    },
+    {
+      "DisplayName": "工步编码",
+      "BindingOrKey": "StepCode",
+      "EditLevel": 6
+    },
+    {
+      "DisplayName": "工步名称",
+      "BindingOrKey": "StepNmae",
+      "EditLevel": 6
+    },
+    {
+      "DisplayName": "默认工单号",
+      "BindingOrKey": "WorkOrderNo",
+      "EditLevel": 6
+    },
+    {
+      "DisplayName": "电解液编码",
+      "BindingOrKey": "ElectrolyteCode",
+      "EditLevel": 6
+    },
+    {
+      "DisplayName": "电解液批次号",
+      "BindingOrKey": "ElectrolyteLotCode",
+      "EditLevel": 6
+    },
+    {
+      "DisplayName": "电解液数量",
+      "BindingOrKey": "ElectrolyteQuantity",
+      "EditLevel": 6
+    },
+    {
+      "DisplayName": "胶钉批次码",
+      "BindingOrKey": "GlueNailCode",
+      "EditLevel": 6
+    }
+  ],
+  "RunParameters": [
+    {
+      "DisplayName": "保液量标准(g)",
+      "BindingOrKey": "InjectionStandard",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "保液量上限(g)",
+      "BindingOrKey": "InjectionUpper",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "保液量下限(g)",
+      "BindingOrKey": "InjectionLower",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "注液泵上限(g)",
+      "BindingOrKey": "VariableInjectionUpper",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "注液泵下限(g)",
+      "BindingOrKey": "VariableInjectionLower",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "补液泵上限(g)",
+      "BindingOrKey": "ReplenishInjectionUpper",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "前称重上限(g)",
+      "BindingOrKey": "IncomingWeightUpper",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "前称重下限(g)",
+      "BindingOrKey": "IncomingWeightLower",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "后称重上限(g)",
+      "BindingOrKey": "AfterWeightUpper",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "后称重下限(g)",
+      "BindingOrKey": "AfterWeightLower",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "电压复测次数",
+      "BindingOrKey": "VoltageTestCount",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "电压上限(V)",
+      "BindingOrKey": "VoltageUpper",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "电压下限(V)",
+      "BindingOrKey": "VoltageLower",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "失液量上限(g)",
+      "BindingOrKey": "LossOfFluidUpper",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "胶钉高度差上限",
+      "BindingOrKey": "NailHeightDifferenceUpper",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "化成钉重量(g)",
+      "BindingOrKey": "NailWeight",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "电压极差补偿",
+      "BindingOrKey": "VoltageRangeCompensation",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "老化压降上限(mv)",
+      "BindingOrKey": "VoltageDropUpper",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "少液回流上限(次)",
+      "BindingOrKey": "InjectLessReworkCount",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "测漏回流上限(次)",
+      "BindingOrKey": "TestLeakReworkCount",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "扫码重试次数",
+      "BindingOrKey": "RetryCountScanCode",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "称重超时(ms)",
+      "BindingOrKey": "WeighingTimeout",
+      "EditLevel": 2
+    }
+  ],
+  "FunctionEnables": [
+    {
+      "DisplayName": "启用变量注液",
+      "BindingOrKey": "IsEnableVariableInjection",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "启用前称重量管控",
+      "BindingOrKey": "IsEnableIncomingWeightControl",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "启用最终重管控",
+      "BindingOrKey": "IsEnableAfterWeightCheck",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "启用注液量管控",
+      "BindingOrKey": "IsEnableInjectionCheck",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "复投模式(不管控前称重)",
+      "BindingOrKey": "IsRewrokMode",
+      "EditLevel": 3
+    },
+    {
+      "DisplayName": "复投复用旧短路数据",
+      "BindingOrKey": "IsEnableReuseOldTest",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "启用虚拟码",
+      "BindingOrKey": "IsEnablePseudoCode",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "空载模式",
+      "BindingOrKey": "IsEmptyLoadMode",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "PC->PLC结果强制合格（所有）",
+      "BindingOrKey": "IsForceOK",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "PC->PLC结果强制合格（MES）",
+      "BindingOrKey": "IsIgnoreMesNg",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "同步PLC权限时询问",
+      "BindingOrKey": "IsEnableSyncPLCInquire",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "启用胶钉高度差检测",
+      "BindingOrKey": "IsCheckNailHeightDifference",
+      "EditLevel": 4
+    },
+    {
+      "DisplayName": "启用PLC指定进站通道有无电池",
+      "BindingOrKey": "IsLaneHaveBattery",
+      "EditLevel": 4611686018427387904
+    },
+    {
+      "DisplayName": "启用MES补传",
+      "BindingOrKey": "IsEnableMesResend",
+      "EditLevel": 4611686018427387904
+    },
+    {
+      "DisplayName": "读取泵温度",
+      "BindingOrKey": "IsEnableReadPumpTemperature",
+      "EditLevel": 4611686018427387904
+    },
+    {
+      "DisplayName": "使用实时上下限",
+      "BindingOrKey": "IsEnableCurrentRange",
+      "EditLevel": 4611686018427387904
+    }
+  ],
+  "AdvancedConfigs": [
+    {
+      "DisplayName": "MES状态",
+      "BindingOrKey": "MESStatus",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "生产类型",
+      "BindingOrKey": "ProductionType",
+      "EditLevel": 4
+    },
+    {
+      "DisplayName": "电芯条码验证规则",
+      "BindingOrKey": "BatteryBarcodeValidationRule",
+      "EditLevel": 4611686018427387904
+    },
+    {
+      "DisplayName": "注液托盘码验证规则",
+      "BindingOrKey": "InjectionTrayCodeValidationRule",
+      "EditLevel": 4611686018427387904
+    },
+    {
+      "DisplayName": "物流托盘码验证规则",
+      "BindingOrKey": "LogisticsTrayCodeValidationRule",
+      "EditLevel": 4611686018427387904
+    },
+    {
+      "DisplayName": "自动返回主界面(秒)",
+      "BindingOrKey": "AutoExitSuperAdminTime",
+      "EditLevel": 4611686018427387904
+    },
+    {
+      "DisplayName": "本地数据库连接1",
+      "BindingOrKey": "LocalConnectionString",
+      "EditLevel": 4611686018427387904
+    },
+    {
+      "DisplayName": "本地数据库连接2",
+      "BindingOrKey": "LocalConnectionString2",
+      "EditLevel": 4611686018427387904
+    },
+    {
+      "DisplayName": "远程数据库连接1",
+      "BindingOrKey": "OtherConnectionString",
+      "EditLevel": 4611686018427387904
+    },
+    {
+      "DisplayName": "远程数据库连接2",
+      "BindingOrKey": "OtherConnectionString2",
+      "EditLevel": 4611686018427387904
+    },
+    {
+      "DisplayName": "执行SQL超时时间(秒)",
+      "BindingOrKey": "SqlExecutionTimeout",
+      "EditLevel": 4611686018427387904
+    },
+    {
+      "DisplayName": "SQL打印日志阈值(秒) [当执行sql超过此阈值时打印sql至日志，如果设为0就打印所有日志]",
+      "BindingOrKey": "SqlLogThreshold",
+      "EditLevel": 4611686018427387904
+    },
+    {
+      "DisplayName": "从其它设备取前工序数据  [优先级:1]",
+      "BindingOrKey": "IsEnableNetWeightFromDevice",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "MES取前工序数据  [优先级:2，需启用MES接口]",
+      "BindingOrKey": "IsEnablePreProcessDataFromMES",
+      "EditLevel": 2
+    },
+    {
+      "DisplayName": "禁用数据库自动删除列",
+      "BindingOrKey": "IsDisabledDelete",
+      "EditLevel": 4611686018427387904
+    },
+    {
+      "DisplayName": "打印动态类",
+      "BindingOrKey": "PrintDynamicClass",
+      "EditLevel": 4611686018427387904
+    },
+    {
+      "DisplayName": "设备状态防抖间隔(毫秒)",
+      "BindingOrKey": "DeviceStatusSpanMillisecond",
+      "EditLevel": 4611686018427387904
+    }
+  ]
+}

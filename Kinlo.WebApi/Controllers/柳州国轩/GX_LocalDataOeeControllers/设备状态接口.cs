@@ -90,13 +90,7 @@ public partial class GX_GetDataController : ControllerBase
   /// <param name="endTime"></param>
   /// <param name="stopTypes">停机类型</param>
   /// <param name="shifts"></param>
-  public record DeviceExcpetionRequest(
-    string traceID,
-    string startTime,
-    string endTime,
-    string[] stopTypes,
-    string[] shifts
-  );
+  public record DeviceExcpetionRequest( string traceID,  string startTime, string endTime, string[] stopTypes, string[] shifts);
 
   const string _deviceExcpetionName = "获取设备异常信息明细接口";
 
