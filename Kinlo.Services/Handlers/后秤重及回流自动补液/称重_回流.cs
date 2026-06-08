@@ -2,16 +2,16 @@ namespace Kinlo.Services.Handlers;
 
 public partial class WeightAfterHandler
 {
-   /// <summary>
-   /// 注液过少回流称重
-   /// </summary>
-   /// <param name="mainBattery"></param>
-   /// <param name="weiging"></param>
-   /// <param name="plcData"></param>
-   /// <param name="logHeader"></param>
-   /// <returns></returns>
-   public async Task RefillHandle(  IBatMainModel mainBattery,  OperationResult<double> deviceResult,  ReceivePlcDataModel plcData,  string logHeader )
-   {
+    /// <summary>
+    /// 注液过少回流称重
+    /// </summary>
+    /// <param name="mainBattery"></param>
+    /// <param name="weiging"></param>
+    /// <param name="plcData"></param>
+    /// <param name="logHeader"></param>
+    /// <returns></returns>
+    public async Task RefillHandle(IBatMainModel mainBattery, OperationResult<double> deviceResult, ReceivePlcDataModel plcData, string logHeader)
+    {
         #region 本地属性赋值给电池
         var batBefScan = (IBatScanBeforeModel)mainBattery;
         var batAftWeight = (IBatWeightAfterModel)mainBattery;

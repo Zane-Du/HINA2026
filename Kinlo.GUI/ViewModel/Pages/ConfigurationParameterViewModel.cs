@@ -251,35 +251,38 @@ namespace Kinlo.GUI.ViewModel
     /// <returns></returns>
     private bool ParmeterValidator(ParameterConfig parameter)
     {
-      StringBuilder sb = new StringBuilder();
-      if (parameter.FunctionEnable.IsRewrokMode)
-      {
-        if (parameter.FunctionEnable.IsEnableVariableInjection)
-          sb.Append($"[启用复投] 但未启用 [变量注液]；");
-        if (parameter.FunctionEnable.IsEnableReuseOldTest)
-          sb.Append($"[启用复投] 但未启用 [复用旧短路数据]；");
-      }
-      if (sb.Length > 0)
-      {
-        var res = HandyControl.Controls.MessageBox.Show(
-          sb.ToString(),
-          "警告：请确认以下信息是有意为之，否则请取消重新设置！",
-          MessageBoxButton.OKCancel,
-          MessageBoxImage.Warning
-        );
+            #region 参数保存警告，启用复投，必须启用变量注液和复用旧短路数据
+            StringBuilder sb = new StringBuilder();
+            if (parameter.FunctionEnable.IsRewrokMode)
+            {
+                if (parameter.FunctionEnable.IsEnableVariableInjection)
+                    sb.Append($"[启用复投] 但未启用 [变量注液]；");
+                if (parameter.FunctionEnable.IsEnableReuseOldTest)
+                    sb.Append($"[启用复投] 但未启用 [复用旧短路数据]；");
+            }
+            if (sb.Length > 0)
+            {
+                var res = HandyControl.Controls.MessageBox.Show(
+                  sb.ToString(),
+                  "警告：请确认以下信息是有意为之，否则请取消重新设置！",
+                  MessageBoxButton.OKCancel,
+                  MessageBoxImage.Warning
+                );
 
-        if (res == MessageBoxResult.OK)
-          return true;
+                if (res == MessageBoxResult.OK)
+                    return true;
 
-        return false;
-      }
-      else
-      {
-        return true;
-      }
-    }
+                return false;
+            }
+            else
+            {
+                return true;
+            }
 
-    public void Load()
+            #endregion
+        }
+
+        public void Load()
     {
       _ = UIThreadHelper.InvokeOnUiThreadAsync(() => Task.Run(() => SelectedRecipe = OtherParameter.OtherParameter.CurrentRecipe));
     }

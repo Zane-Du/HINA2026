@@ -144,14 +144,7 @@ public static class HandlerHelper
   /// <param name="plc"></param>
   /// <param name="parameterConfig"></param>
   /// <param name="logHeader"></param>
-  public static void WritePlcResult(
-    this SignalAddressModel address,
-    ResultTypeEnum productResult,
-    ResultTypeEnum mesResult,
-    IPLC plc,
-    ParameterConfig parameterConfig,
-    string logHeader
-  )
+  public static void WritePlcResult(this SignalAddressModel address,ResultTypeEnum productResult, ResultTypeEnum mesResult, IPLC plc,ParameterConfig parameterConfig,string logHeader)
   {
     short sendValue = GetSendPlcResultValue(productResult, mesResult, parameterConfig, logHeader);
     var resultAddress = new SignalAddressModel($"{address.Lable}.PCResult", address.Address);
@@ -180,19 +173,14 @@ public static class HandlerHelper
   /// <param name="parameterConfig"></param>
   /// <param name="logHeader"></param>
   /// <returns></returns>
-  static short GetSendPlcResultValue(
-    ResultTypeEnum productResult,
-    ResultTypeEnum mesResult,
-    ParameterConfig parameterConfig,
-    string logHeader
-  )
+  static short GetSendPlcResultValue(ResultTypeEnum productResult,ResultTypeEnum mesResult,ParameterConfig parameterConfig,string logHeader)
   {
     if ((int)productResult >= 21) //如果生产结果为NG，优先使用生产结果
     {
       return productResult.ToPlcResultValue(parameterConfig, logHeader);
     }
 
-    if ((int)mesResult >= 21 && parameterConfig.FunctionEnable.IsIgnoreMesNg) //MES 结果为NG并开启忽略MES NG
+    if ((int)mesResult >= 21 && parameterConfig.FunctionEnable.IsForceOKMES) //MES 结果为NG并开启忽略MES NG
     {
       $"注意：MES结果为 [{mesResult}]，但开启了MES失败不排出，将忽略MES结果；".LogProcess(logHeader);
       return productResult.ToPlcResultValue(parameterConfig, logHeader);

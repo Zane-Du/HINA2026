@@ -21,7 +21,7 @@ public class FunctionEnableModel
   /// <summary>
   /// 启用最终重管控,
   /// </summary>
-  [Languages(["启用最终重管控", "Deteksi bobot setelah diaktifkan", "final enabling weight detection"])]
+  [Languages(["启用后称重量管控", "Deteksi bobot setelah diaktifkan", "final enabling weight detection"])]
   [UIDisplay(Hiddens = [ProductionTypeEnum.回氦, ProductionTypeEnum.清洗机], IsRunEdit = true, EditLevel = (uint)DefaultRoleEnum.工艺)]
   public bool IsEnableAfterWeightCheck { get; set; }
 
@@ -74,14 +74,14 @@ public class FunctionEnableModel
   /// <summary>
   /// 启用虚拟码
   /// </summary>
-  [Languages(["启用虚拟码", "Aktifkan kode virtual", "Enable virtual code"])]
+  [Languages(["前扫码启用虚拟码", "Aktifkan kode virtual", "Enable virtual code"])]
   [UIDisplay(IsRunEdit = true, EditLevel = (uint)DefaultRoleEnum.工艺)]
   public bool IsEnablePseudoCode { get; set; }
 
   /// <summary>
   /// 空载模式
   /// </summary>
-  [Languages(["空载模式", "Mode beban kosong", "Empty mode"])]
+  [Languages(["空跑模式", "Mode beban kosong", "Empty mode"])]
   [UIDisplay(IsRunEdit = true, EditLevel = (uint)DefaultRoleEnum.工艺)]
   public bool IsEmptyLoadMode { get; set; }
 
@@ -97,7 +97,7 @@ public class FunctionEnableModel
   /// </summary>
   [Languages(["PC->PLC结果强制合格（MES）", "", "ignore mes result"])]
   [UIDisplay(IsRunEdit = true, EditLevel = (uint)DefaultRoleEnum.工艺)]
-  public bool IsIgnoreMesNg { get; set; }
+  public bool IsForceOKMES { get; set; }
 
   /// <summary>
   /// 同步PLC权限时询问

@@ -80,14 +80,7 @@ public partial class PLcStatusAndAlarmHandler
         });
 
         var span = Math.Round(((DateTime)shutdown.EndTime - shutdown.StartTime).TotalSeconds);
-        var args = new MesRequestBuildNJGX.ArgsActiveShutdown(
-          1,
-          shutdown.Id.ToString(),
-          shutdown.Message,
-          shutdown.StartTime,
-          shutdown.EndTime,
-          span.ToString()
-        );
+        var args = new MesRequestBuildNJGX.ArgsActiveShutdown(  1, shutdown.Id.ToString(),   shutdown.Message, shutdown.StartTime,  shutdown.EndTime,span.ToString());
         var call = _mesInterfaceParameterConfig.GetApiCall(args);
 
         if (call != null && call.IsEnable) //有接口并已启用

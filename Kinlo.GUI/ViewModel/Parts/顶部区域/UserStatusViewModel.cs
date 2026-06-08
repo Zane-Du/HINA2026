@@ -255,15 +255,7 @@ public class UserStatusViewModel : Screen
    /// <returns></returns>
    public async Task SyncPLC(UserModel user)
    {
-      if (
-         _parameter.FunctionEnable.IsEnableSyncPLCInquire
-         && HandyControl.Controls.MessageBox.Show(
-            $"要同步[{user.Role.Name}权限至PLC吗?",
-            "提示：",
-            MessageBoxButton.OKCancel,
-            MessageBoxImage.Warning
-         ) != MessageBoxResult.OK
-      )
+      if (_parameter.FunctionEnable.IsEnableSyncPLCInquire  && HandyControl.Controls.MessageBox.Show(    $"要同步[{user.Role.Name}权限至PLC吗?",   "提示：", MessageBoxButton.OKCancel, MessageBoxImage.Warning) != MessageBoxResult.OK)
       {
          return;
       }

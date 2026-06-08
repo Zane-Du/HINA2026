@@ -22,7 +22,7 @@ public class ScanCodeBeforeHandler : ServiceHandlerBase
     private async Task<bool> HandleRework(IBatMainModel mainBattery, List<ReceivePlcDataModel> plcDatas, int dtIndex, string logHeader
     )
     {
-        #region 一注从前扫码复投(plc给ID为99时代表复投电池)，处理干重及短路数据
+        #region 上位机或PLC任何一方都可以决定复投模式
         bool isReworkMode = false; //是否为复投模式
         bool isTest = true; //一注是否测短路
         if (_parameterConfig.FunctionEnable.IsRewrokMode) //本地或PLC任一 一方为复投模式都可
@@ -40,31 +40,33 @@ public class ScanCodeBeforeHandler : ServiceHandlerBase
         {
             return isTest;
         }
+        #endregion
 
+        #region 从数据库找到旧电池
         var oldBattery = await _sugarDB.GetLastBattereyByBarcodeAsync(mainBattery.Barcode, logHeader);
         if (oldBattery == null)
+        {
             return isTest;
+        }
 
-        $"找到上次电池数据，当前为复投电池！变量注液开关：{(_parameterConfig.FunctionEnable.IsEnableVariableInjection ? "开启" : "关闭")}；复用短路数据开关：{(_parameterConfig.FunctionEnable.IsEnableReuseOldTest ? "开启" : "关闭")}；".LogProcess(
-           logHeader,
-           Log4NetLevelEnum.信息
-        );
+
+        $"找到上次电池数据，当前为复投电池！变量注液开关：{(_parameterConfig.FunctionEnable.IsEnableVariableInjection ? "开启" : "关闭")}；复用短路数据开关：{(_parameterConfig.FunctionEnable.IsEnableReuseOldTest ? "开启" : "关闭")}；".LogProcess(logHeader, Log4NetLevelEnum.信息);
         mainBattery.ReproductionCount++;
 
         if (_parameterConfig.AdvancedConfig.ProductionType != ProductionTypeEnum.一次注液) //只有一注才关心干重及短路测试
+        {
             return isTest;
+        }
 
+        #endregion
+
+        #region 拿到旧电池的干重和短路测试数据
         //如果上次干重在范围，使用上次干重
 
-        if (
-           BatteryWeightValidator.IncomingWeightRangeCheck(
-              ((IBatScanBeforeModel)oldBattery).NetWeight,
-              BatteryWeightValidator.GetBeforWeightRange(_parameterConfig),
-              _parameterConfig,
-              logHeader
-           ) == ResultTypeEnum.OK
-        )
+        if (BatteryWeightValidator.IncomingWeightRangeCheck(((IBatScanBeforeModel)oldBattery).NetWeight, BatteryWeightValidator.GetBeforWeightRange(_parameterConfig), _parameterConfig, logHeader) == ResultTypeEnum.OK)
+        {
             ((IBatScanBeforeModel)mainBattery).NetWeight = ((IBatScanBeforeModel)oldBattery).NetWeight;
+        }
 
         //如果上次短路数据合格，使用上次短路数据，不用测试
         if (_parameterConfig.FunctionEnable.IsEnableReuseOldTest)
@@ -103,6 +105,7 @@ public class ScanCodeBeforeHandler : ServiceHandlerBase
         }
 
         return isTest;
+
         #endregion
     }
     #endregion
