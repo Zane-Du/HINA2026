@@ -9,19 +9,9 @@ public interface IDevice
 
   bool Open();
   void Close();
-  OperationResult<TValue> ReadValue<TValue>(
-    SignalAddressModel address,
-    string logHeader,
-    DeviceOperationOptions? options = null
-  );
+  OperationResult<TValue> ReadValue<TValue>(SignalAddressModel address,string logHeader,DeviceOperationOptions? options = null);
 
-  OperationResult<TClass> ReadClass<TClass>(
-    SignalAddressModel address,
-    TClass obj,
-    string logHeader,
-    DeviceOperationOptions? options = null
-  )
-    where TClass : class, new();
+  OperationResult<TClass> ReadClass<TClass>(SignalAddressModel address,TClass obj,string logHeader,DeviceOperationOptions? options = null)where TClass : class, new();
   bool WriteValue(object value, SignalAddressModel address, string logHeader, DeviceOperationOptions? options = null);
 
   bool WriteClass<TClass>(

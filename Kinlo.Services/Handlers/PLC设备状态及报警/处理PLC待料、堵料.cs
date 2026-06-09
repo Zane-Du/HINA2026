@@ -4,7 +4,7 @@ namespace Kinlo.Services.Handlers;
 
 public partial class PLcStatusAndAlarmHandler
 {
-    #region MES待料，堵料上传方法
+    #region MES待料，堵料开始上传方法
     /// <summary>
     /// 发生新的待料、堵料，一般是发给MES
     /// </summary>
@@ -12,14 +12,7 @@ public partial class PLcStatusAndAlarmHandler
     /// <param name="newPlcStatus"></param>
     private async Task StartMaterialShortageHandleAsync(TimelineItem shutdown)
     {
-        var args = new MesRequestBuildNJGX.ArgsMaterialShortage(
-          0,
-          shutdown.Id.ToString(),
-          shutdown.Message,
-          shutdown.StartTime,
-          null,
-          string.Empty
-        );
+        var args = new MesRequestBuildNJGX.ArgsMaterialShortage( 0,   shutdown.Id.ToString(), shutdown.Message,    shutdown.StartTime,  null, string.Empty );
         var call = _mesInterfaceParameterConfig.GetApiCall(args);
         if (call != null && call.IsEnable) //有接口并已启用
         {
@@ -42,14 +35,7 @@ public partial class PLcStatusAndAlarmHandler
         });
 
         var span = Math.Round((shutdown.StartTime - (DateTime)shutdown.EndTime).TotalSeconds);
-        var args = new MesRequestBuildNJGX.ArgsMaterialShortage(
-          1,
-          shutdown.Id.ToString(),
-          shutdown.Message,
-          shutdown.StartTime,
-          shutdown.EndTime,
-          span.ToString()
-        );
+        var args = new MesRequestBuildNJGX.ArgsMaterialShortage(    1,    shutdown.Id.ToString(),   shutdown.Message, shutdown.StartTime,  shutdown.EndTime,  span.ToString());
 
         var call = _mesInterfaceParameterConfig.GetApiCall(args);
 

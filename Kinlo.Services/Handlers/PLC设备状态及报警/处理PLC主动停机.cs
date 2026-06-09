@@ -4,22 +4,15 @@ namespace Kinlo.Services.Handlers;
 
 public partial class PLcStatusAndAlarmHandler
 {
-    #region MES手动停机上传方法
+    #region MES主动停机开始上传方法
     /// <summary>
-    /// 发生新的手动停机，一般是发给MES
+    /// 发生新的主动停机，一般是发给MES
     /// </summary>
     /// <param name="oldPlcStatus"></param>
     /// <param name="newPlcStatus"></param>
     private async Task StartManualShutdownHandleAsync(TimelineItem shutdown)
     {
-        var args = new MesRequestBuildNJGX.ArgsActiveShutdown(
-          0,
-          shutdown.Id.ToString(),
-          "",
-          shutdown.StartTime,
-          null,
-          string.Empty
-        );
+        var args = new MesRequestBuildNJGX.ArgsActiveShutdown(  0, shutdown.Id.ToString(),    "",  shutdown.StartTime,  null,  string.Empty);
         var call = _mesInterfaceParameterConfig.GetApiCall(args);
         if (call != null && call.IsEnable) //有接口并已启用
         {

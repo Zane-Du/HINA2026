@@ -26,26 +26,11 @@ public partial class PLcStatusAndAlarmHandler
                 _ => "0",
             }; //设备状态指示牌（带反馈）（0：停机；1：运行；2：待机；3：故障；4：维修；5：急停；6：其它）
             var warningStatus = status.Any(x => x == DeviceStateEnum.报警) ? "1" : "0"; //报警喇叭状态（0：喇叭停止；1：喇叭报警）
-
-            var args = new MesRequestBuildNJGX.ArgsDeviceStatus(
-              manualStatus,
-              runStatus,
-              waitStatus,
-              faultStatus,
-              repairStatus,
-              stopStatus,
-              equipSign,
-              warningStatus
-            );
-
+            var args = new MesRequestBuildNJGX.ArgsDeviceStatus(manualStatus, runStatus, waitStatus, faultStatus, repairStatus, stopStatus, equipSign, warningStatus);
             var call = _mesInterfaceParameterConfig.GetApiCall(args);
             if (call != null && call.IsEnable) //有接口并已启用
             {
-                var inputResult = await _mesService.SendAsync(
-                  call,
-                  "",
-                  receiveMes => receiveMes.MesCommonParse(_taskLogHeader)
-                );
+                var inputResult = await _mesService.SendAsync(call, "", receiveMes => receiveMes.MesCommonParse(_taskLogHeader));
             }
         }
         catch (Exception ex)
