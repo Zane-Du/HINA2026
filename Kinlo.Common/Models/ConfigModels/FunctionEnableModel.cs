@@ -131,10 +131,10 @@ public class FunctionEnableModel
   public bool IsLaneHaveBattery { get; set; } = false;
 
   /// <summary>
-  /// 启用MES补传
+  /// 启用自动MES补传
   /// </summary>
   [UIDisplay(IsRunEdit = true, EditLevel = (ulong)1 << 62)]
-  [Languages(["启用MES补传", "", ""])]
+  [Languages(["启用自动MES补传", "", ""])]
   public bool IsEnableMesResend { get; set; } = false;
 
   /// <summary>

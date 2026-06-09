@@ -87,7 +87,6 @@ public class LiquidInjectionPumpHandler : ServiceHandlerBase
 
     #endregion
 
-
     protected override async Task HandleCore(short plcValue)
     {
         #region 从PLC读取电池ID信息

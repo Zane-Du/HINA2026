@@ -25,23 +25,23 @@
   Style="{StaticResource MainWindowStyle}"
   WindowState="Maximized"
   mc:Ignorable="d">
-  <Window.Resources>
-    <cvt:MultiToBoolConverter x:Key="MultiToBoolConverter" />
-    <cvt:ResectionMainToVisibilityConverter x:Key="ResectionMainToVisibilityConverter" />
-    <cvt:LevelToVisibilityMultiConverter x:Key="LevelToVisibilityMultiConverter" />
-    <cvt:PlcAlarmsToVisibilityConverter x:Key="PlcAlarmsToVisibilityConverter" />
-    <cvt:PlcAlarmsToStringConverter x:Key="PlcAlarmsToStringConverter" />
-    <sys:Double x:Key="footerButtonSize">32</sys:Double>
-    <sys:Double x:Key="navWidth">53</sys:Double>
-    <GridLength x:Key="navGridWidth">53</GridLength>
-  </Window.Resources>
-  <Grid>
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="auto" />
-      <ColumnDefinition />
-    </Grid.ColumnDefinitions>
-    <!--#region 左边导航栏区-->
-    <kc:VerticalNav
+    <Window.Resources>
+        <cvt:MultiToBoolConverter x:Key="MultiToBoolConverter" />
+        <cvt:ResectionMainToVisibilityConverter x:Key="ResectionMainToVisibilityConverter" />
+        <cvt:LevelToVisibilityMultiConverter x:Key="LevelToVisibilityMultiConverter" />
+        <cvt:PlcAlarmsToVisibilityConverter x:Key="PlcAlarmsToVisibilityConverter" />
+        <cvt:PlcAlarmsToStringConverter x:Key="PlcAlarmsToStringConverter" />
+        <sys:Double x:Key="footerButtonSize">32</sys:Double>
+        <sys:Double x:Key="navWidth">53</sys:Double>
+        <GridLength x:Key="navGridWidth">53</GridLength>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <!--#region 左边导航栏区-->
+        <kc:VerticalNav
       Margin="0,0,0,0"
       VerticalAlignment="Stretch"
       Background="{DynamicResource PrimaryBrush}"
@@ -58,28 +58,28 @@
       ItemsSource="{Binding Menus}"
       SelectedIndex="{Binding SelectedIndex, Mode=TwoWay}"
       ShinkWidth="{StaticResource navWidth}">
-      <kc:VerticalNav.Header>
-        <Grid Margin="6,8,6,120" VerticalAlignment="Top">
-          <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="42" />
-            <ColumnDefinition />
-          </Grid.ColumnDefinitions>
-          <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-          </Grid.RowDefinitions>
-          <Image
+            <kc:VerticalNav.Header>
+                <Grid Margin="6,8,6,120" VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="42" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Image
             Width="38"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Source="\Resources\WeightMain2.ico" />
-          <TextBlock
+                    <TextBlock
             Grid.Column="1"
             Margin="0,0,8,0"
             HorizontalAlignment="Right"
             Style="{StaticResource TextBlockTitleBold}"
             Text="{Binding Parameter.DeviceParameter.Title}" />
-          <TextBlock
+                    <TextBlock
             Grid.Row="1"
             Grid.Column="1"
             Grid.ColumnSpan="2"
@@ -87,16 +87,16 @@
             HorizontalAlignment="Right"
             Foreground="{StaticResource PrimaryTextBrush}"
             Text="{Binding Version}" />
-        </Grid>
-      </kc:VerticalNav.Header>
-      <kc:VerticalNav.Footer>
-        <StackPanel
+                </Grid>
+            </kc:VerticalNav.Header>
+            <kc:VerticalNav.Footer>
+                <StackPanel
           x:Name="menuBottomStackPanel"
           Grid.Row="2"
           Margin="0,0,0,10"
           HorizontalAlignment="Left"
           VerticalAlignment="Bottom">
-          <!--<Button
+                    <!--<Button
                         Margin="0,0,0,10"
                         Padding="0"
                         HorizontalAlignment="Left"
@@ -132,7 +132,7 @@
                         </Grid>
                     </Button>-->
 
-          <!--<Button
+                    <!--<Button
                         Margin="0,0,0,10"
                         Padding="0"
                         HorizontalAlignment="Left"
@@ -167,7 +167,7 @@
                                 Text="{DynamicResource 获取工单}" />
                         </Grid>
                     </Button>-->
-          <Button
+                    <Button
             Margin="0,0,0,10"
             Padding="0"
             HorizontalAlignment="Left"
@@ -175,17 +175,17 @@
             HorizontalContentAlignment="Left"
             Command="{s:Action MaterialLoadCMD}"
             Style="{DynamicResource ButtonCustom}">
-            <Grid HorizontalAlignment="Stretch">
-              <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="{StaticResource navGridWidth}" />
-                <ColumnDefinition />
-              </Grid.ColumnDefinitions>
-              <Border
+                        <Grid HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="{StaticResource navGridWidth}" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Border
                 Width="{StaticResource footerButtonSize}"
                 Height="{StaticResource footerButtonSize}"
                 Background="{DynamicResource PrimaryBrush}"
                 CornerRadius="5">
-                <TextBlock
+                                <TextBlock
                   Margin="0"
                   HorizontalAlignment="Center"
                   VerticalAlignment="Center"
@@ -193,16 +193,16 @@
                   FontSize="19"
                   Foreground="{DynamicResource TextIconBrush}"
                   Text="&#xe630;" />
-              </Border>
-              <TextBlock
+                            </Border>
+                            <TextBlock
                 Grid.Column="1"
                 Margin="5,0,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 Text="{DynamicResource 原材料上料}" />
-            </Grid>
-          </Button>
-          <Button
+                        </Grid>
+                    </Button>
+                    <Button
             Margin="0,0,0,10"
             Padding="0"
             HorizontalAlignment="Left"
@@ -210,17 +210,17 @@
             HorizontalContentAlignment="Left"
             Command="{s:Action InspectionCmd}"
             Style="{DynamicResource ButtonCustom}">
-            <Grid HorizontalAlignment="Stretch">
-              <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="{StaticResource navGridWidth}" />
-                <ColumnDefinition />
-              </Grid.ColumnDefinitions>
-              <Border
+                        <Grid HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="{StaticResource navGridWidth}" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Border
                 Width="{StaticResource footerButtonSize}"
                 Height="{StaticResource footerButtonSize}"
                 Background="{DynamicResource PrimaryBrush}"
                 CornerRadius="5">
-                <TextBlock
+                                <TextBlock
                   Margin="0"
                   HorizontalAlignment="Center"
                   VerticalAlignment="Center"
@@ -228,16 +228,16 @@
                   FontSize="16"
                   Foreground="{DynamicResource TextIconBrush}"
                   Text="&#xe7d2;" />
-              </Border>
-              <TextBlock
+                            </Border>
+                            <TextBlock
                 Grid.Column="1"
                 Margin="5,0,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 kc:LanguageResource.Key="仪器点检" />
-            </Grid>
-          </Button>
-          <Button
+                        </Grid>
+                    </Button>
+                    <Button
             Margin="0,0,0,0"
             Padding="0"
             HorizontalAlignment="Left"
@@ -245,17 +245,17 @@
             HorizontalContentAlignment="Left"
             Command="{s:Action UpdateReplenishVolumeCMD}"
             Style="{DynamicResource ButtonCustom}">
-            <Grid HorizontalAlignment="Stretch">
-              <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="{StaticResource navGridWidth}" />
-                <ColumnDefinition />
-              </Grid.ColumnDefinitions>
-              <Border
+                        <Grid HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="{StaticResource navGridWidth}" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Border
                 Width="{StaticResource footerButtonSize}"
                 Height="{StaticResource footerButtonSize}"
                 Background="{DynamicResource PrimaryBrush}"
                 CornerRadius="5">
-                <TextBlock
+                                <TextBlock
                   Margin="0"
                   HorizontalAlignment="Center"
                   VerticalAlignment="Center"
@@ -263,34 +263,34 @@
                   FontSize="16"
                   Foreground="{DynamicResource TextIconBrush}"
                   Text="&#xe689;" />
-              </Border>
-              <TextBlock
+                            </Border>
+                            <TextBlock
                 Grid.Column="1"
                 Margin="5,0,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 Text="{DynamicResource 补液}" />
-            </Grid>
-          </Button>
-        </StackPanel>
-      </kc:VerticalNav.Footer>
-    </kc:VerticalNav>
-    <!--#endregion-->
+                        </Grid>
+                    </Button>
+                </StackPanel>
+            </kc:VerticalNav.Footer>
+        </kc:VerticalNav>
+        <!--#endregion-->
 
-    <!--#region 右面内容区域-->
-    <Grid Grid.Column="1">
-      <Grid.RowDefinitions>
-        <RowDefinition Height="auto" />
-        <RowDefinition />
-        <RowDefinition Height="auto" />
-      </Grid.RowDefinitions>
-      <!--#region 非客户端区-->
-      <ContentControl Margin="0,0,0,0" s:View.Model="{Binding NonClientArea}" />
-      <!--#endregion-->
+        <!--#region 右面内容区域-->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <!--#region 非客户端区-->
+            <ContentControl Margin="0,0,0,0" s:View.Model="{Binding NonClientArea}" />
+            <!--#endregion-->
 
-      <!--#region 显示内容区-->
-      <Grid Grid.Row="1" Margin="8,0,8,8">
-        <kc:SlidingContentControl
+            <!--#region 显示内容区-->
+            <Grid Grid.Row="1" Margin="8,0,8,8">
+                <kc:SlidingContentControl
           s:View.Model="{Binding ViewModelContent}"
           ShakeAmplitude="30"
           ShakeMode="Displace"
@@ -298,52 +298,52 @@
           TransitionDuration="0:0:.6"
           VirtualizingStackPanel.IsVirtualizing="True" />
 
-        <Border
+                <Border
           Background="Transparent"
           MouseDown="Border_MouseDown"
           Opacity=".3">
-          <Border.Visibility>
-            <MultiBinding Converter="{StaticResource LevelToVisibilityMultiConverter}">
-              <MultiBinding.Bindings>
-                <Binding Path="UsersStatus.LocalLoggedinUser.Role.Level" />
-                <Binding Path="SelectedMenu" />
-                <Binding Path="Temporary.IsRunning" />
-              </MultiBinding.Bindings>
-            </MultiBinding>
-          </Border.Visibility>
-          <StackPanel
+                    <Border.Visibility>
+                        <MultiBinding Converter="{StaticResource LevelToVisibilityMultiConverter}">
+                            <MultiBinding.Bindings>
+                                <Binding Path="UsersStatus.LocalLoggedinUser.Role.Level" />
+                                <Binding Path="SelectedMenu" />
+                                <Binding Path="Temporary.IsRunning" />
+                            </MultiBinding.Bindings>
+                        </MultiBinding>
+                    </Border.Visibility>
+                    <StackPanel
             Margin="0,0,50,50"
             HorizontalAlignment="Right"
             VerticalAlignment="Bottom"
             Opacity=".46">
-            <TextBlock
+                        <TextBlock
               Margin="0,0,0,0"
               HorizontalAlignment="Center"
               VerticalAlignment="Center"
               FontSize="80"
               Foreground="Red"
               Text="{DynamicResource [ 浏览模式 ]}" />
-            <TextBlock
+                        <TextBlock
               Margin="0,0,0,0"
               HorizontalAlignment="Center"
               VerticalAlignment="Center"
               FontSize="46"
               Foreground="Red"
               Text="{DynamicResource 无权限或程序处于运行状态}" />
-            <TextBlock
+                        <TextBlock
               Margin="0,0,0,0"
               HorizontalAlignment="Center"
               VerticalAlignment="Center"
               FontSize="25"
               Foreground="Red"
               Text="{DynamicResource 登陆有相关权限帐号或停止运行关闭浏览模式}" />
-          </StackPanel>
-        </Border>
-      </Grid>
-      <!--#endregion-->
+                    </StackPanel>
+                </Border>
+            </Grid>
+            <!--#endregion-->
 
-      <!--#region  滚动PLC报警-->
-      <!--<hc:RunningBlock
+            <!--#region  滚动PLC报警-->
+            <!--<hc:RunningBlock
                 Grid.Row="2"
                 Margin="8,5,8,0"
                 Padding="0,3"
@@ -372,40 +372,40 @@
                     </MultiBinding>
                 </hc:RunningBlock.Visibility>
             </hc:RunningBlock>-->
-      <!--#endregion-->
-    </Grid>
-    <!--#endregion-->
+            <!--#endregion-->
+        </Grid>
+        <!--#endregion-->
 
-    <!--#region 常用弹窗位置-->
-    <ScrollViewer
+        <!--#region 常用弹窗位置-->
+        <ScrollViewer
       Grid.Column="1"
       Margin="0,100,10,10"
       HorizontalAlignment="Right"
       VerticalAlignment="Bottom"
       VerticalScrollBarVisibility="Hidden">
-      <StackPanel VerticalAlignment="Bottom" hc:Growl.GrowlParent="True" />
-    </ScrollViewer>
-    <!--#endregion-->
+            <StackPanel VerticalAlignment="Bottom" hc:Growl.GrowlParent="True" />
+        </ScrollViewer>
+        <!--#endregion-->
 
-    <!--#region 配置属性显示-->
-    <Popup
+        <!--#region 配置属性显示-->
+        <Popup
       Name="PropertyShowDrawer"
       AllowsTransparency="True"
       IsOpen="{Binding EntityPropertyVisibleVM.IsEntityPropertyVisible}"
       Placement="Mouse"
       PopupAnimation="Fade"
       StaysOpen="False">
-      <Border Margin="20" Style="{StaticResource BorderRegion}">
-        <Border.Effect>
-          <DropShadowEffect
+            <Border Margin="20" Style="{StaticResource BorderRegion}">
+                <Border.Effect>
+                    <DropShadowEffect
             BlurRadius="20"
             Opacity="0.5"
             ShadowDepth="0" />
-        </Border.Effect>
-        <ContentControl s:View.Model="{Binding EntityPropertyVisibleVM}" />
-      </Border>
-    </Popup>
-    <!--#endregion-->
-    <ContentControl s:View.Model="{Binding WebServerTrayVM}" />
-  </Grid>
+                </Border.Effect>
+                <ContentControl s:View.Model="{Binding EntityPropertyVisibleVM}" />
+            </Border>
+        </Popup>
+        <!--#endregion-->
+        <ContentControl s:View.Model="{Binding WebServerTrayVM}" />
+    </Grid>
 </Window>

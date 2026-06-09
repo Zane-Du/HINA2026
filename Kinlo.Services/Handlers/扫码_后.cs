@@ -45,7 +45,7 @@ public class ScanCodeAfterHandler : ServiceHandlerBase
             _isDeviceAlarm = true;
             return;
         }
-        var scanCodeResults = ScanBarcodeHelpre.ScanCode(
+        var scanCodeResults = ScanBarcodeHelper.ScanCode(
            device,
            _parameterConfig,
            Context,

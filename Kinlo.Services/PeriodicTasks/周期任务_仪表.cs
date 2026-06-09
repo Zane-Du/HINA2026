@@ -5,111 +5,134 @@ namespace Kinlo.Services.PeriodicTasks;
 /// </summary>
 public partial class PeriodicTasksHelper
 {
-  private static readonly SemaphoreSlim _semaphore = new(1, 1); //初始可用许可证数量：1;最大许可证数量：1；
-
-  /// <summary>
-  /// 仪表 ZTDTSU666电能表 HDK_LDZ_DN50流量计
-  /// </summary>
-  /// <param name="container"></param>
-  /// <returns></returns>
-  private static async Task PollingElectricMeterData(IContainer container, DateTime time)
-  {
-    if (time.Second % 5 != 0) //5秒一次
-      return;
-    if (await _semaphore.WaitAsync(0)) // 尝试立即获取许可证，0ms 超时
+    #region 读取电能表方法
+    static async Task ReadZTDTSU666(IDevice device, IContainer container, GlobalStaticTemporary temporary)
     {
-      try
-      {
-        await OnPollingElectricMeterData(container);
-      }
-      finally
-      {
-        _semaphore.Release();
-      }
-    }
-  }
-
-  private static Task OnPollingElectricMeterData(IContainer container)
-  {
-    return Task.Run(async () =>
-    {
-      var temporary = container.Get<GlobalStaticTemporary>();
-      var devicesConfig = container.Get<DevicesConfig>();
-      var ztdTSU666 = devicesConfig.GetRunDevice(x => x?.DeviceInfo.Communication == CommunicationEnum.ZTDTSU666电能表);
-      if (ztdTSU666 != null)
-      {
-        await ReadZTDTSU666(ztdTSU666, container, temporary);
-      }
-      else
-      {
-        var client = devicesConfig.DeviceList.FirstOrDefault(x =>
-          x.Communication == CommunicationEnum.ZTDTSU666电能表 && x.IsEnable && x.IsOnline == 1
-        );
-        if (client != null)
+        try
         {
-          await client.WithCreatedDeviceAsync(async d => await ReadZTDTSU666(d, container, temporary));
+            var _result = device.ReadClass<ZTDTSU666ResultModel>(null, null, "");
+            if (_result.IsSuccess)
+            {
+                await UIThreadHelper.Dispatcher.BeginInvoke(() => temporary.ZTDTSU666Result = _result.Value!);
+            }
+            else
+            {
+                $"电能表取值失败！".LogRun(Log4NetLevelEnum.警告);
+            }
         }
-        else
+        catch (Exception ex)
         {
-          await UIThreadHelper.Dispatcher.BeginInvoke(() => temporary.ZTDTSU666Result = new ZTDTSU666ResultModel());
+            await UIThreadHelper.Dispatcher.BeginInvoke(() => temporary.ZTDTSU666Result = new ZTDTSU666ResultModel());
+            $"电能表异常:{ex}".LogRun(Log4NetLevelEnum.警告);
         }
-      }
+    }
 
-      var _HDK_LDZ_DN50 = devicesConfig.GetRunDevice(x =>
-        x?.DeviceInfo.Communication == CommunicationEnum.HDK_LDZ_DN50流量计
-      );
-      if (_HDK_LDZ_DN50 != null)
-      {
-        await ReadHDK_LDZ_DN50(_HDK_LDZ_DN50, container, temporary);
-      }
-      else
-      {
-        var client = devicesConfig.DeviceList.FirstOrDefault(x =>
-          x.Communication == CommunicationEnum.HDK_LDZ_DN50流量计 && x.IsEnable && x.IsOnline == 1
-        );
-        if (client != null)
+    #endregion
+
+    #region 读取流量计方法
+    static async Task ReadHDK_LDZ_DN50(IDevice device, IContainer container, GlobalStaticTemporary temporary)
+    {
+        try
         {
-          await client.WithCreatedDeviceAsync(async d => await ReadHDK_LDZ_DN50(d, container, temporary));
+            var _result = device.ReadClass<HDK_LDZ_DN50DTO>(null, null, "");
+            if (_result.IsSuccess)
+            {
+                await UIThreadHelper.Dispatcher.BeginInvoke(() => temporary.HDK_LDZ_DN50 = _result.Value!);
+            }
+            else
+            {
+                $"HDK_LDZ_DN50流量计取值失败！".LogRun(Log4NetLevelEnum.警告);
+            }
+
         }
-        else
+        catch (Exception ex)
         {
-          await UIThreadHelper.Dispatcher.BeginInvoke(() => temporary.HDK_LDZ_DN50 = new HDK_LDZ_DN50DTO());
+            await UIThreadHelper.Dispatcher.BeginInvoke(() => temporary.HDK_LDZ_DN50 = new HDK_LDZ_DN50DTO());
+            $"HDK_LDZ_DN50流量计异常:{ex}".LogRun(Log4NetLevelEnum.警告);
         }
-      }
-    });
-  }
+    }
 
-  static async Task ReadZTDTSU666(IDevice device, IContainer container, GlobalStaticTemporary temporary)
-  {
-    try
-    {
-      var _result = device.ReadClass<ZTDTSU666ResultModel>(null, null, "");
-      if (_result.IsSuccess)
-        await UIThreadHelper.Dispatcher.BeginInvoke(() => temporary.ZTDTSU666Result = _result.Value!);
-      else
-        $"电能表取值失败！".LogRun(Log4NetLevelEnum.警告);
-    }
-    catch (Exception ex)
-    {
-      await UIThreadHelper.Dispatcher.BeginInvoke(() => temporary.ZTDTSU666Result = new ZTDTSU666ResultModel());
-      $"电能表异常:{ex}".LogRun(Log4NetLevelEnum.警告);
-    }
-  }
+    #endregion
 
-  static async Task ReadHDK_LDZ_DN50(IDevice device, IContainer container, GlobalStaticTemporary temporary)
-  {
-    try
+
+    #region 许可证轮询写法，十分精妙，防止重叠执行：如果上一次轮询还没完成，新的轮询请求会被跳过，直接执行10s后的方法
+    //防止重叠执行：如果上一次轮询还没完成，新的轮询请求会被跳过
+    private static readonly SemaphoreSlim _semaphore = new(1, 1); //初始可用许可证数量：1;最大许可证数量：1；
+
+    /// <summary>
+    /// 仪表 ZTDTSU666电能表 HDK_LDZ_DN50流量计
+    /// </summary>
+    /// <param name="container"></param>
+    /// <returns></returns>
+    private static async Task PollingElectricMeterData(IContainer container, DateTime time)
     {
-      var _result = device.ReadClass<HDK_LDZ_DN50DTO>(null, null, "");
-      if (_result.IsSuccess)
-        await UIThreadHelper.Dispatcher.BeginInvoke(() => temporary.HDK_LDZ_DN50 = _result.Value!);
-      else
-        $"HDK_LDZ_DN50流量计取值失败！".LogRun(Log4NetLevelEnum.警告);
+        if (time.Second % 5 != 0) //5秒一次
+            return;
+        if (await _semaphore.WaitAsync(0) == true) // 尝试立即获取许可证，0ms 超时
+        {
+            try
+            {
+                await OnPollingElectricMeterData(container);
+            }
+            finally
+            {
+                _semaphore.Release();
+            }
+        }
     }
-    catch (Exception ex)
+    #endregion
+
+
+    private static Task OnPollingElectricMeterData(IContainer container)
     {
-      await UIThreadHelper.Dispatcher.BeginInvoke(() => temporary.HDK_LDZ_DN50 = new HDK_LDZ_DN50DTO());
-      $"HDK_LDZ_DN50流量计异常:{ex}".LogRun(Log4NetLevelEnum.警告);
+        return Task.Run(async () =>
+        {
+
+            #region 读取电能表
+            var temporary = container.Get<GlobalStaticTemporary>();
+            var devicesConfig = container.Get<DevicesConfig>();
+            var ztdTSU666 = devicesConfig.GetRunDevice(x => x?.DeviceInfo.Communication == CommunicationEnum.ZTDTSU666电能表);
+            if (ztdTSU666 != null)
+            {
+                await ReadZTDTSU666(ztdTSU666, container, temporary);
+            }
+            else
+            {
+                var client = devicesConfig.DeviceList.FirstOrDefault(x => x.Communication == CommunicationEnum.ZTDTSU666电能表 && x.IsEnable && x.IsOnline == 1);
+                if (client != null)
+                {
+                    await client.WithCreatedDeviceAsync(async d => await ReadZTDTSU666(d, container, temporary));
+                }
+                else
+                {
+                    await UIThreadHelper.Dispatcher.BeginInvoke(() => temporary.ZTDTSU666Result = new ZTDTSU666ResultModel());
+                }
+            }
+            #endregion
+
+            #region 读取流量计
+            var _HDK_LDZ_DN50 = devicesConfig.GetRunDevice(x => x?.DeviceInfo.Communication == CommunicationEnum.HDK_LDZ_DN50流量计);
+            if (_HDK_LDZ_DN50 != null)
+            {
+                await ReadHDK_LDZ_DN50(_HDK_LDZ_DN50, container, temporary);
+            }
+          
+            else
+            {
+                var client = devicesConfig.DeviceList.FirstOrDefault(x => x.Communication == CommunicationEnum.HDK_LDZ_DN50流量计 && x.IsEnable && x.IsOnline == 1);
+                if (client != null)
+                {
+                    await client.WithCreatedDeviceAsync(async d => await ReadHDK_LDZ_DN50(d, container, temporary));
+                }
+                else
+                {
+                    await UIThreadHelper.Dispatcher.BeginInvoke(() => temporary.HDK_LDZ_DN50 = new HDK_LDZ_DN50DTO());
+                }
+            }
+            #endregion
+
+        });
     }
-  }
+
+   
 }

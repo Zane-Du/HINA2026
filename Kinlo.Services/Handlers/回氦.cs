@@ -16,7 +16,9 @@ public class BackHeliumYNHandler : ServiceHandlerBase
     {
         var lengthObj = Context.ExtensionProps.FirstOrDefault(x => x.Type == ExtensionType.长度1);
         if (lengthObj != null)
+        {
             _dataLength = lengthObj.ValueInt;
+        }
         else
         {
             var msg = $"{Context.ProcessesType}数据长度未配置，读取数据会错误，请联系软件工程师！";
@@ -62,7 +64,7 @@ public class BackHeliumYNHandler : ServiceHandlerBase
                  return;
              }
              #endregion
-
+             
           #region PLC回氦数据赋值给电池
              logHeader = Context.ToProcessLogHeader(actual.HeliumPosition, actual.ID, mainBattery.Barcode);
              var backHelium = (IBatBackHeliumModel)mainBattery;
@@ -110,6 +112,7 @@ public class BackHeliumYNHandler : ServiceHandlerBase
              #endregion
 
         });
+
         #region 写入PLC结果
       Context.DataAddress.WritePlcResult(productResult, mesResult, _plc, _parameterConfig, _taskLogHeader); //写入PLC结果
 

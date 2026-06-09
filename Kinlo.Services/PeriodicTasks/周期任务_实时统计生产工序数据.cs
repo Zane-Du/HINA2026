@@ -5,17 +5,17 @@ namespace Kinlo.Services.PeriodicTasks;
 /// </summary>
 public partial class PeriodicTasksHelper
 {
-   private IBatteryCache? _batteryCache;
-   private bool _isFist = true;
+    private IBatteryCache? _batteryCache;
+    private bool _isFist = true;
 
-   private async Task PollingProcessRatio(DateTime time, IContainer container)
-   {
-      if (!_isFist && time.Second % 3 != 0) //3秒一次
-         return;
+    private async Task PollingProcessRatio(DateTime time, IContainer container)
+    {
+        if (!_isFist && time.Second % 3 != 0) //3秒一次
+            return;
 
-      _isFist = false;
-      _batteryCache ??= _container.Get<IBatteryCache>();
+        _isFist = false;
+        _batteryCache ??= _container.Get<IBatteryCache>();
 
-      await _processRatioDisplay.Refresh(_batteryCache.GetAll());
-   }
+        await _processRatioDisplay.Refresh(_batteryCache.GetAll());
+    }
 }

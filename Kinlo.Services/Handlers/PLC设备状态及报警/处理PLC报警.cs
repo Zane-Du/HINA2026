@@ -220,6 +220,7 @@ public partial class PLcStatusAndAlarmHandler
             $"PLC消警：{AlarmRecordToString(stopAlarmRecords)}".LogProcess(_taskLogHeader);
         }
         #endregion
+
         return (newAlarmRecords, stopAlarmRecords);
     }
     #endregion

@@ -6,43 +6,39 @@ namespace Kinlo.Services.Handlers;
 [DeviceConnec(ProcessTypeEnum.真空打钉, [CommunicationEnum.None])] //指定工艺，可指定多个
 public class NailVacuumHandler : ServiceHandlerBase
 {
-   public NailVacuumHandler(
-      IContainer container,
-      IDevice plc,
-      PLCInteractAddressModel plcInteractAddress,
-      CancellationTokenSource taskToken
-   )
-      : base(container, plc, plcInteractAddress, taskToken) { }
+    #region 构造函数方法
+    public NailVacuumHandler(IContainer container, IDevice plc, PLCInteractAddressModel plcInteractAddress, CancellationTokenSource taskToken) : base(container, plc, plcInteractAddress, taskToken) { }
 
-   protected override async Task HandleCore(short plcValue)
-   {
-      PlcToPcVacuumNailDtu plcToPcVacuumNail = new PlcToPcVacuumNailDtu();
-      _plc.ReadClass(Context.DataAddress, plcToPcVacuumNail, _taskLogHeader);
+    #endregion
 
-      $"记忆ID：{JsonSerializer.Serialize(plcToPcVacuumNail)}".LogProcess(_taskLogHeader);
-      await Parallel.ForAsync(
-         0,
-         plcToPcVacuumNail.Id.Length,
-         async (i, _) =>
-         //  await Parallel.ForEachAsync(plcToPcVacuumNail.Id, new ParallelOptions { MaxDegreeOfParallelism = Context.DataLength }, async (plcData, _) =>
-         {
+    protected override async Task HandleCore(short plcValue)
+    {
+        #region 从PLC读取电池ID信息
+        PlcToPcVacuumNailDtu plcToPcVacuumNail = new PlcToPcVacuumNailDtu();
+        _plc.ReadClass(Context.DataAddress, plcToPcVacuumNail, _taskLogHeader);
+
+        $"记忆ID：{JsonSerializer.Serialize(plcToPcVacuumNail)}".LogProcess(_taskLogHeader);
+        //  await Parallel.ForEachAsync(plcToPcVacuumNail.Id, new ParallelOptions { MaxDegreeOfParallelism = Context.DataLength }, async (plcData, _) =>
+        #endregion
+
+        await Parallel.ForAsync(0, plcToPcVacuumNail.Id.Length, async (i, _) =>
+        {
+            #region 根据PLC给的ID，从缓存中拿到电池
             long id = plcToPcVacuumNail.Id[i];
             if (id == 0)
-               return;
+            {
+                return;
+            }
             string logHeader = Context.ToProcessLogHeader(plcValue + i, id);
             var mainBattery = await _batteryCache.GetByIdAsync(id, logHeader); //取缓存
             if (mainBattery == null)
             {
-               Context.DataAddress.WritePlcResult(
-                  ResultTypeEnum.数据库找不到电池,
-                  ResultTypeEnum._,
-                  _plc,
-                  _parameterConfig,
-                  logHeader
-               ); //写入PLC结果
-               return;
+                Context.DataAddress.WritePlcResult(ResultTypeEnum.数据库找不到电池, ResultTypeEnum._, _plc, _parameterConfig, logHeader); //写入PLC结果
+                return;
             }
+            #endregion
 
+            #region PLC数据赋值给电池
             logHeader = Context.ToProcessLogHeader(plcValue + i, id, mainBattery.Barcode);
             ResultTypeEnum result = ResultTypeEnum.OK;
             var nail = (IBatVacuumNailModel)mainBattery;
@@ -50,18 +46,24 @@ public class NailVacuumHandler : ServiceHandlerBase
             nail.SetVaccumValue = (float)Math.Round(plcToPcVacuumNail.SetVaccumValue, 3);
             nail.KeepPressureTime = (float)Math.Round(plcToPcVacuumNail.KeepPressureTime, 3);
             nail.BeforeKeepPressureVacuumValue = (float)
-               Math.Round(plcToPcVacuumNail.BeforeKeepPressureVacuumValue[i], 3);
+             Math.Round(plcToPcVacuumNail.BeforeKeepPressureVacuumValue[i], 3);
             nail.AfterKeepPressureVacuumValue = (float)Math.Round(plcToPcVacuumNail.AfterKeepPressureVacuumValue[i], 3);
 
             result = ResultTypeEnum.OK;
+
+            #endregion
+
+            #region 更新数据库电池表，刷新界面，写入PLC结果
             if (!await _sugarDB.UpdateByObjectAsync(mainBattery, logHeader))
             {
-               result = ResultTypeEnum.保存数据库失败;
+                result = ResultTypeEnum.保存数据库失败;
             }
 
             AddDisplayData(mainBattery); //更新界面显示
             Context.DataAddress.WritePlcResult(result, ResultTypeEnum._, _plc, _parameterConfig, logHeader); //写入PLC结果
-         }
-      );
-   }
+
+            #endregion
+
+        });
+    }
 }

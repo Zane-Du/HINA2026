@@ -219,6 +219,7 @@ public partial class PLcStatusAndAlarmHandler : ServiceHandlerBase
         #endregion
 
         #region 添加主动被动待料堵料MES任务
+        //LINQ方法，Select链式遍历等同于for循环
         var tasks = _deviceStateEnums.Select(stateType =>
         {
             var newPlcStatus = plcValue.GetPlcStatus(stateType);

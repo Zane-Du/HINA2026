@@ -401,7 +401,9 @@ public class ScanCodeBeforeHandler : ServiceHandlerBase
         string logHeader1 = Context.ToProcessLogHeader(plcValue);
         ScanBarcodeResultDto[] scanCodeResults = new ScanBarcodeResultDto[Context.DataLength];
         for (int i = 0; i < Context.DataLength; i++)
+        {
             scanCodeResults[i] = new ScanBarcodeResultDto();
+        }
 
         var isReadPlcSuccess = TryReadPlcData(out var plcDatas, showErrorDialog: false); //读取PLC数据
         if (isReadPlcSuccess)
@@ -443,14 +445,7 @@ public class ScanCodeBeforeHandler : ServiceHandlerBase
                 _isDeviceAlarm = true;
                 return;
             }
-            scanCodeResults = ScanBarcodeHelpre.ScanCode(
-               device,
-               _parameterConfig,
-               Context,
-               isHaveBatterys.content,
-               _taskLogHeader,
-               _parameterConfig.AdvancedConfig.BatteryBarcodeValidationRule
-            );
+            scanCodeResults = ScanBarcodeHelper.ScanCode(device, _parameterConfig, Context, isHaveBatterys.content, _taskLogHeader, _parameterConfig.AdvancedConfig.BatteryBarcodeValidationRule);
         }
         #endregion
 
@@ -513,66 +508,63 @@ public class ScanCodeBeforeHandler : ServiceHandlerBase
             }
             #endregion
 
-            #region 扫码成功扫码枪条码赋值给电池
+            #region 扫码成功
             else
             {
+                #region 扫码成功扫码枪条码赋值给电池
+
                 batBefScan.BeforeScanResult = ResultTypeEnum.OK;
                 mainBattery.Barcode = scanCodeResults[dtIndex].Code;
                 logHeader = Context.ToProcessLogHeader(lane, mainBattery.Id, mainBattery.Barcode);
 
-            #endregion
+                #endregion
 
-            #region 如果复投模式开启，执行复投方法
+                #region 如果复投模式开启，执行复投方法
                 //处理复投电池
                 isTest = await HandleRework(mainBattery, plcDatas, dtIndex + 1, logHeader);
 
                 #endregion
 
-
-
-            #region MES执行进站方法
+                #region MES执行进站方法
                 //MES进站
                 await MesInput(mainBattery, logHeader);
 
                 #endregion
 
-            #region MES执行多工序防呆校验生产方法
+                #region MES执行多工序防呆校验生产方法
                 //二次注液多工序防呆检验生产接口
                 if (_parameterConfig.AdvancedConfig.ProductionType == ProductionTypeEnum.二次注液)
+                {
                     await MesSecondInjValidation(mainBattery, logHeader);
+                }
 
                 #endregion
 
-            #region MES执行获取工单号方法
+                #region MES执行获取工单号方法
                 //MES获取工单号
                 await MesGetWrokOrder(mainBattery, _parameterConfig, logHeader);
 
                 #endregion
 
-            #region MES执行取前工序数据方法
+                #region MES执行取前工序数据方法
 
                 // 取一注数据优先级: MES -> 本地机台(如果用U盘导入数据，可以导入到本地，然后配置数据库连接取)
                 await GetPrimaryInjectData(mainBattery, logHeader);
                 #endregion
 
-
-
-            #region 插入数据库电池表，插入本地电芯缓存
                 _batteryCache.Put(mainBattery, logHeader); //电芯缓存
             }
+            #endregion
 
+            #region 插入数据库电池表，刷新界面，写入PLC结果
             if (!await _sugarDB.InsertableByObjectAsync(mainBattery, logHeader))
+            {
                 batBefScan.BeforeScanResult = ResultTypeEnum.保存数据库失败;
-
-                #endregion
-
-            #region 刷新界面，写入PLC结果
+            }
             //添加界面显示
             base.AddDisplayData(mainBattery);
-
             // 写入PLC ,为2不测短路，其它都测
             WritePLC(mainBattery, dtIndex, isTest ? 1f : 2f, logHeader);
-
             #endregion
         });
     }

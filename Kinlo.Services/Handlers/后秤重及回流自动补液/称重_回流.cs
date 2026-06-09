@@ -53,7 +53,6 @@ public partial class WeightAfterHandler
         if (sendPlcResult == ResultTypeEnum.注液量偏少)
         {
             AddOrUpdateReworkReason(mainBattery);
-
         }
         #endregion
 
@@ -64,9 +63,7 @@ public partial class WeightAfterHandler
             sendPlcResult = ResultTypeEnum.保存数据库失败;
         }
 
-        var processesDatas = _displayDataCollection.ProcessesDatas.FirstOrDefault(x =>
-           x.Processes == ProcessTypeEnum.回流补液
-        );
+        var processesDatas = _displayDataCollection.ProcessesDatas.FirstOrDefault(x =>  x.Processes == ProcessTypeEnum.回流补液 );
         processesDatas?.AddDisplayData(mainBattery); //更新至补液界面显示
 
         plcData.DataAddress.WritePlcResult(sendPlcResult, ResultTypeEnum._, _plc, _parameterConfig, logHeader); //写入PLC结果
